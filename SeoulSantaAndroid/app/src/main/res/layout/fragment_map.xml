@@ -4,10 +4,106 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context=".ui.map.MapFragment">
-
-    <TextView
+    <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="MAP"/>
+            android:layout_height="match_parent">
+        <RelativeLayout
+                android:id="@+id/map_background_layout"
+                android:layout_marginTop="54dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="311dp"
+                android:layout_height="240dp"
+                android:background="@drawable/map_background">
+            <ImageView
+                    android:id="@+id/mt_1"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginLeft="111dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+            <ImageView
+                    android:id="@+id/mt_2"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+            <ImageView
+                    android:id="@+id/mt_3"
+                    android:layout_marginTop="83dp"
+                    android:layout_marginLeft="215dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+            <ImageView
+                    android:id="@+id/mt_4"
+                    android:layout_marginTop="127dp"
+                    android:layout_marginLeft="220dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+            <ImageView
+                    android:id="@+id/mt_5"
+                    android:layout_marginTop="128dp"
+                    android:layout_marginLeft="127dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+            <ImageView
+                    android:id="@+id/mt_6"
+                    android:layout_marginTop="163dp"
+                    android:layout_marginLeft="59dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+            <ImageView
+                    android:id="@+id/mt_7"
+                    android:layout_marginTop="182dp"
+                    android:layout_marginLeft="175dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+            <ImageView
+                    android:id="@+id/mt_8"
+                    android:layout_marginTop="169dp"
+                    android:layout_marginLeft="257dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+
+
+        </RelativeLayout>
+
+        <ImageView
+                android:id="@+id/big_mountain"
+                android:layout_below="@+id/map_background_layout"
+                android:layout_marginTop="71dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/big_mountain"/>
+        <TextView
+                android:id="@+id/tv_click_mt"
+                android:layout_marginTop="21dp"
+                android:layout_below="@id/big_mountain"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="산을 눌러보세요!"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/rcv_map"
+                android:layout_below="@+id/map_background_layout"
+                android:layout_marginTop="51dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+
+
+    </RelativeLayout>
+
+
 
 </FrameLayout>
