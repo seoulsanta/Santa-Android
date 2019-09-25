@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".ui.badge.BadgeFragment">
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.badge.BadgeFragment"
+        android:background="@color/colorMain"
+        android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="#ffffff"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="0dp">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_main"
+                android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
+
+    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+            android:id="@+id/indicator_frag_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dotsColor="#ffffffff"
+            app:dotsStrokeColor="#ffffff"
+            app:dotsCornerRadius="5dp"
+            app:dotsSize="10dp"
+            app:dotsSpacing="10dp"
+            app:dotsStrokeWidth="1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="22dp"/>
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_frag_badge"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="BADGE"/>
+            android:overScrollMode="never">
+    </androidx.viewpager.widget.ViewPager>
 
-</FrameLayout>
+</LinearLayout>

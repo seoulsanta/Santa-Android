@@ -38,8 +38,6 @@ android {
 }
 
 
-
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -58,6 +56,10 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:1.0.0"
     implementation 'com.squareup.retrofit2:retrofit:2.6.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+
+    //indicator
+    implementation 'com.ryanjeffreybrooks:indefinitepagerindicator:1.0.10'
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
 
 
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'

@@ -15,15 +15,18 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".ui.MyActivity">
+        </activity>
+
         <meta-data
                 android:name="com.kakao.sdk.AppKey"
                 android:value="8ed4eb623bf3c05efba5867b5af63929"/>
+
         <activity android:name=".ui.map.detail.CourseMapActivity">
         </activity>
         <activity android:name=".ui.map.detail.CourseDetailActivity">
-
         </activity>
-        <activity android:name=".ui.home.MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

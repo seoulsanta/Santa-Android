@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yamgang.seoulsantaandroid.R
 import com.yamgang.seoulsantaandroid.model.MountainCourses
-import com.yamgang.seoulsantaandroid.ui.home.MainActivity
+import com.yamgang.seoulsantaandroid.ui.MainActivity
 import com.yamgang.seoulsantaandroid.ui.search.adapter.SearchResultCourseRVAdapter
 import kotlinx.android.synthetic.main.fragment_search.*
 
