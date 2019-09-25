@@ -1,11 +1,12 @@
 package com.yamgang.seoulsantaandroid.ui.home
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.yamgang.seoulsantaandroid.R
+import com.yamgang.seoulsantaandroid.ui.search.OnBackPressedListener
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,8 +17,8 @@ class MainActivity : AppCompatActivity() {
         viewInit()
     }
 
-    private fun viewInit(){
-        vp_main_act_pager.apply{
+    private fun viewInit() {
+        vp_main_act_pager.apply {
             adapter = MainTabFragmentStatePagerAdapter(supportFragmentManager, 4)
             offscreenPageLimit = 4
         }
@@ -30,4 +31,20 @@ class MainActivity : AppCompatActivity() {
         tl_main_act_bottom_bar.getTabAt(2)!!.customView = tabLayout.findViewById(R.id.btn_tab_main_act_search)
         tl_main_act_bottom_bar.getTabAt(3)!!.customView = tabLayout.findViewById(R.id.btn_tab_main_act_badge)
     }
+
+    private lateinit var onBackPressedListener: OnBackPressedListener
+
+    fun setOnBackPressedListener(onBackPressedListener: OnBackPressedListener) {
+        this.onBackPressedListener = onBackPressedListener
+        return
+    }
+
+    override fun onBackPressed() {
+        if (onBackPressedListener != null) {
+            onBackPressedListener.onBackPressed()
+        } else {
+            super.onBackPressed()
+        }
+    }
+
 }

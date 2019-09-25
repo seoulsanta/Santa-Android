@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="wrap_content"
+                                                   android:layout_height="wrap_content">
+
+    <TextView
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:letterSpacing="-0.08"
+            android:lineSpacingExtra="8sp"
+            android:text="혜진현무 등산코스 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_rv_search_result_course" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <ImageView
+            android:layout_width="144dp"
+            android:layout_height="102dp" tools:srcCompat="@tools:sample/avatars"
+            android:id="@+id/iv_rv_search_result_course" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rv_search_result_course"
+            app:layout_constraintStart_toStartOf="@+id/tv_rv_search_result_course"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="12dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
