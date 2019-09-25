@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:id="@+id/rl_rv_item_badge_finish"
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/textWhite">
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#dbdbdb"
+            android:layout_alignParentTop="true"/>
+    <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginVertical="20dp">
+        <TextView
+                android:id="@+id/tv_rv_item_badge_finish_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="댕댕이코스"
+                android:textSize="15dp"
+                android:textColor="@color/colorMain"
+                android:fontFamily="@font/kopubworlddotumbold"
+                android:includeFontPadding="false"/>
+        <TextView
+                android:id="@+id/tv_rv_item_badge_finish_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019.09.10 PM 04:20"
+                android:textSize="14dp"
+                android:textColor="@color/badgeTitleText"
+                android:fontFamily="@font/kopubworlddotumlight"
+                android:layout_below="@id/tv_rv_item_badge_finish_title"
+                android:includeFontPadding="false"
+                android:layout_marginTop="4dp"/>
+    </RelativeLayout>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#dbdbdb"
+            android:layout_below="@id/top"/>
+</RelativeLayout>
