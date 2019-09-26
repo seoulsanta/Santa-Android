@@ -6,6 +6,10 @@ import net.daum.mf.map.api.MapView
 import android.view.ViewGroup
 import com.yamgang.seoulsantaandroid.R
 import kotlinx.android.synthetic.main.activity_course_map.view.*
+import net.daum.mf.map.api.MapPoint
+import net.daum.mf.map.api.MapPolyline
+
+
 
 
 class CourseMapActivity : AppCompatActivity() {
@@ -22,6 +26,8 @@ class CourseMapActivity : AppCompatActivity() {
         mapViewContainer.addView(mapView)
 
 
+        val polyline = MapPolyline()
+      // polyline.addPoint(MapPoint.mapPointWithGeoCoord())
 
 
 
