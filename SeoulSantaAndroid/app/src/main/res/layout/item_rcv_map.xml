@@ -32,6 +32,7 @@
                     android:layout_weight="1"
                     android:textSize="13sp"
                     android:textColor="#000000"
+                    android:fontFamily="@font/kopubworlddotumlight"
                     android:text="2코스"/>
             <RelativeLayout
                     android:layout_width="match_parent"
@@ -42,6 +43,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
                         android:textColor="#000000"
+                        android:fontFamily="@font/kopubworlddotumlight"
                         android:text="소요시간"/>
                 <TextView
                         android:layout_alignParentRight="true"
@@ -49,6 +51,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
                         android:textColor="#000000"
+                        android:fontFamily="@font/kopubworlddotumlight"
                         android:text="약 3시간"/>
             </RelativeLayout>
 
@@ -61,6 +64,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
                         android:textColor="#000000"
+                        android:fontFamily="@font/kopubworlddotumlight"
                         android:text="코스난이도"/>
                 <TextView
                         android:layout_alignParentRight="true"
@@ -68,6 +72,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
                         android:textColor="#000000"
+                        android:fontFamily="@font/kopubworlddotumlight"
                         android:text="1시간"/>
             </RelativeLayout>
 
