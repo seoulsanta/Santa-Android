@@ -3,13 +3,25 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".ui.map.MapFragment">
+             tools:context=".ui.map.MapFragment"
+             android:background="#ffffff">
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <RelativeLayout
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="64dp">
+            <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/santa_logo"/>
+
+        </RelativeLayout>
+        <RelativeLayout
                 android:id="@+id/map_background_layout"
-                android:layout_marginTop="54dp"
+                android:layout_marginTop="75dp"
                 android:layout_centerHorizontal="true"
                 android:layout_width="311dp"
                 android:layout_height="240dp"
