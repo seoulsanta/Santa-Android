@@ -1,14 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".ui.home.HomeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.HomeFragment"
+        android:overScrollMode="never"
+        android:background="@color/textWhite">
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="HOME"/>
-
-</FrameLayout>
+            android:orientation="vertical">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:layout_marginHorizontal="16dp">
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo_main"
+                    android:layout_centerVertical="true"/>
+            <ImageView
+                    android:id="@+id/btn_frag_home_my"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_my"
+                    android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <ImageView
+                android:id="@+id/iv_frag_home_weather"
+                android:layout_width="80dp"
+                android:layout_height="75dp"
+                android:src="@drawable/weather_01"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"/>
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘 서울시의 날씨는 "
+                    android:textSize="15dp"
+                    android:textColor="@color/textBlack"
+                    android:fontFamily="@font/kopubworlddotumlight"
+                    android:includeFontPadding="false"/>
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <View
+                        android:layout_width="31dp"
+                        android:layout_height="7dp"
+                        android:layout_marginTop="9dp"
+                        android:background="#423abe00">
+                </View>
+                <TextView
+                        android:id="@+id/tv_frag_home_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="맑음입니다."
+                        android:textSize="15dp"
+                        android:textColor="@color/textBlack"
+                        android:fontFamily="@font/kopubworlddotumlight"
+                        android:includeFontPadding="false"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView
+                android:id="@+id/tv_frag_home_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="즐거운 등산하세요!"
+                android:textSize="15dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/textBlack"
+                android:fontFamily="@font/kopubworlddotumlight"
+                android:includeFontPadding="false"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_frag_home_theme_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:overScrollMode="never">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
