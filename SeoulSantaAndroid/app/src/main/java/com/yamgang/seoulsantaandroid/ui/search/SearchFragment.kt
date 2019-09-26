@@ -53,6 +53,19 @@ class SearchFragment : Fragment() {
         setVisible(search_container)
         setGone(search_detail_container)
 
+        btn_search_icon.setOnClickListener {
+            var search_word :String = edt_search_mountain.text.toString()
+            edt_search_detail_word.setText(search_word)
+            setGone(search_container)
+            setVisible(search_detail_container)
+
+            // 결과가 있을 때
+            //getResults()
+
+            //결과가 없을 때
+            getNoResult()
+        }
+
         btn_search_x.setOnClickListener {
             edt_search_detail_word.setText(" ")
             try {
@@ -65,19 +78,16 @@ class SearchFragment : Fragment() {
             setGone(btn_search_x)
             setVisible(btn_search_detail)
         }
+    }
 
-        btn_search_icon.setOnClickListener {
-            setGone(search_container)
-            setVisible(search_detail_container)
+    fun getResults(){
+        setGone(search_result_no_item_container)
+        setRecyclerView()
+    }
 
-            // 결과가 있을 때
-            setGone(search_result_no_item_container)
-            setRecyclerView()
-
-            //결과가 없을 때
-//            setGone(search_result_container)
-//            setGone(rv_search_result_course_list)
-        }
+    fun getNoResult() {
+        setGone(search_result_container)
+        setGone(rv_search_result_course_list)
     }
 
     fun setRecyclerView() {
@@ -92,7 +102,6 @@ class SearchFragment : Fragment() {
             ,
             MountainCourses("오쪼고 코스", "https://hcom-graph.s3.ap-northeast-2.amazonaws.com/mbll_2019-08-16_143830.png")
         )
-        Log.d("현주", tmp.toString())
         try {
             rv_search_result_course_list!!.apply {
                 adapter = SearchResultCourseRVAdapter(this@SearchFragment.context!!, tmp)
@@ -103,6 +112,7 @@ class SearchFragment : Fragment() {
             Log.e("현주 에러", "" + e.message)
         }
     }
+
     private fun setGone(view: View) {
         view.visibility = View.GONE
     }

@@ -19,14 +19,19 @@
     </com.yamgang.seoulsantaandroid.util.SwipeDisabledViewPager>
 
     <com.google.android.material.tabs.TabLayout
-            android:background="@android:color/white"
+            android:background="@drawable/border_main_tab"
             android:layout_width="0dp"
             android:layout_height="50dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:id="@+id/tl_main_act_bottom_bar"
+            app:tabTextColor="#575757"
+            app:tabSelectedTextColor="#58be00"
             app:tabIndicatorColor="#58be00"
+            app:tabIndicatorHeight="3dp"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorGravity="top"
             app:tabRippleColor="@android:color/transparent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
