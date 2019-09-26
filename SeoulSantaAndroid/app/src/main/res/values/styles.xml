@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name = "android:layout_marginLeft">23dp</item>
+        <item name = "android:layout_marginRight">23dp</item>
+    </style>
 </resources>
+
