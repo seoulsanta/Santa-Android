@@ -21,6 +21,7 @@ import java.security.NoSuchAlgorithmException
 
 class CourseDetailActivity : AppCompatActivity() {
     lateinit var networkService: NetworkService
+    var name = " "
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +37,8 @@ class CourseDetailActivity : AppCompatActivity() {
 
         btn_start_course.setOnClickListener {
             val intent = Intent(applicationContext,CourseMapActivity::class.java)
+            intent.putExtra("course_idx",course_idx)
+            intent.putExtra("name",name)
             startActivity(intent)
         }
 
@@ -59,6 +62,7 @@ class CourseDetailActivity : AppCompatActivity() {
 //                        .into(img_course)
                     mt_name.text = response.body()!!.data.mountain_name
                     mt_content.text = response.body()!!.data.mountain_content
+                    name = response.body()!!.data.course_name
                     course_name.text = response.body()!!.data.course_name
                     course_time.text = response.body()!!.data.time
                     course_degree.text = response.body()!!.data.degree
