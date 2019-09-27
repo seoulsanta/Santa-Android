@@ -8,7 +8,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.yamgang.seoulsantaandroid.R
-import com.yamgang.seoulsantaandroid.ui.badge.BadgeListData
+import com.yamgang.seoulsantaandroid.model.get.BadgeListData
 
 class BadgeFinishRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<BadgeListData>): RecyclerView.Adapter<BadgeFinishRecyclerViewAdapter.Holder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
