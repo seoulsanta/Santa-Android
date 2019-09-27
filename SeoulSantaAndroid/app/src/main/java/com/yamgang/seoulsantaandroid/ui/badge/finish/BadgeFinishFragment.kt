@@ -8,19 +8,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.yamgang.seoulsantaandroid.R
+import com.yamgang.seoulsantaandroid.ui.badge.BadgeData
+import com.yamgang.seoulsantaandroid.ui.badge.BadgeFragment
 import com.yamgang.seoulsantaandroid.ui.badge.BadgeListData
 import kotlinx.android.synthetic.main.fragment_badge_finish.view.*
 
 class BadgeFinishFragment : Fragment() {
 
     lateinit var inflater: LayoutInflater
-    val dataList: ArrayList<BadgeListData> = arrayListOf(
-        BadgeListData(1,1,"댕댕이코스","몇월몇일"),
-        BadgeListData(1,1,"댕댕이코스","몇월몇일"),
-        BadgeListData(1,1,"댕댕이코스","몇월몇일")
-    )
     //BadgeFragment에서 통신해서 넘어온 데이타리스트 사용하기
-    //val dataList: ArrayList<BadgeListData> = ArrayList()
+    val data: BadgeData = BadgeFragment.instance.data
     lateinit var badgeFinishRecyclerViewAdapter: BadgeFinishRecyclerViewAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -31,13 +28,13 @@ class BadgeFinishFragment : Fragment() {
     }
 
     private fun setRecyclerView(view:View) {
-        if(dataList.size == 0) {
+        if(data.badge.size == 0) {
             view.rl_frag_badge_finish_default_page.visibility = View.VISIBLE
             view.rl_frag_badge_finish_exist_page.visibility = View.GONE
         } else{
             view.rl_frag_badge_finish_default_page.visibility = View.GONE
             view.rl_frag_badge_finish_exist_page.visibility = View.VISIBLE
-            badgeFinishRecyclerViewAdapter = BadgeFinishRecyclerViewAdapter(activity!!, dataList)
+            badgeFinishRecyclerViewAdapter = BadgeFinishRecyclerViewAdapter(activity!!, data.badge)
             view.rv_frag_badge_finish_list.adapter = badgeFinishRecyclerViewAdapter
             view.rv_frag_badge_finish_list.layoutManager = LinearLayoutManager(activity)
         }

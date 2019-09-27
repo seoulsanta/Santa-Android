@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.yamgang.seoulsantaandroid.R
 import com.yamgang.seoulsantaandroid.ui.badge.BadgeData
+import com.yamgang.seoulsantaandroid.ui.badge.BadgeFragment
 import com.yamgang.seoulsantaandroid.ui.badge.BadgeListData
 import kotlinx.android.synthetic.main.fragment_badge_current.view.*
 
@@ -20,14 +21,8 @@ class BadgeCurrentFragment : Fragment() {
         var instance: BadgeCurrentFragment = BadgeCurrentFragment()
     }
     lateinit var inflater: LayoutInflater
-    val data: BadgeData = BadgeData(4,10,
-        arrayListOf(BadgeListData(1,1,"댕댕이코스","몇월몇일"),
-            BadgeListData(1,1,"댕댕이코스","몇월몇일"),
-            BadgeListData(1,1,"댕댕이코스","몇월몇일"),
-            BadgeListData(1,1,"댕댕이코스","몇월몇일"))
-    )
     //BadgeFragment에서 통신해서 넘어온 데이타리스트 사용하기
-    //val dataList: ArrayList<BadgeList> = ArrayList()
+    val data: BadgeData = BadgeFragment.instance.data
     lateinit var badgeCurrentRecyclerViewAdapter: BadgeCurrentRecyclerViewAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

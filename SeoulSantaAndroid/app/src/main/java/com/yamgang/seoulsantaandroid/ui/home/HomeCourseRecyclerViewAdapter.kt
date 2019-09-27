@@ -1,4 +1,4 @@
-package com.yamgang.seoulsantaandroid.ui.home.Adapter
+package com.yamgang.seoulsantaandroid.ui.home
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -10,7 +10,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.yamgang.seoulsantaandroid.R
-import com.yamgang.seoulsantaandroid.ui.home.HomeCourseData
 
 class HomeCourseRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<HomeCourseData>): RecyclerView.Adapter<HomeCourseRecyclerViewAdapter.Holder>() {
 
