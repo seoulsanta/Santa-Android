@@ -1,4 +1,4 @@
-package com.yamgang.seoulsantaandroid.ui.badge
+package com.yamgang.seoulsantaandroid.model.get
 
 data class GetBadgeResponse (
     val message: String,

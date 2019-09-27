@@ -8,9 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.yamgang.seoulsantaandroid.R
-import com.yamgang.seoulsantaandroid.ui.badge.BadgeData
+import com.yamgang.seoulsantaandroid.model.get.BadgeData
 import com.yamgang.seoulsantaandroid.ui.badge.BadgeFragment
-import com.yamgang.seoulsantaandroid.ui.badge.BadgeListData
 import kotlinx.android.synthetic.main.fragment_badge_finish.view.*
 
 class BadgeFinishFragment : Fragment() {

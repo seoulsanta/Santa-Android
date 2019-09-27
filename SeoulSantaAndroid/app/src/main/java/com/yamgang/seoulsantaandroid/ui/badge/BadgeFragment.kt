@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.yamgang.seoulsantaandroid.R
-import com.yamgang.seoulsantaandroid.ui.home.HomeData
+import com.yamgang.seoulsantaandroid.model.get.BadgeData
+import com.yamgang.seoulsantaandroid.model.get.BadgeListData
+import com.yamgang.seoulsantaandroid.model.get.GetBadgeResponse
 import com.yamgang.seoulsantaandroid.util.ApplicationController
 import kotlinx.android.synthetic.main.fragment_badge.view.*
 import retrofit2.Call
@@ -21,11 +23,14 @@ class BadgeFragment : Fragment() {
     val networkService = ApplicationController.networkService
 
     //lateinit var data: BadgeData
-    var data: BadgeData = BadgeData(4,10,
-        arrayListOf(BadgeListData(1,1,"댕댕이코스","몇월몇일"),
-            BadgeListData(1,1,"댕댕이코스","몇월몇일"),
-            BadgeListData(1,1,"댕댕이코스","몇월몇일"),
-            BadgeListData(1,1,"댕댕이코스","몇월몇일"))
+    var data: BadgeData = BadgeData(
+        4, 10,
+        arrayListOf(
+            BadgeListData(1, 1, "댕댕이코스", "몇월몇일"),
+            BadgeListData(1, 1, "댕댕이코스", "몇월몇일"),
+            BadgeListData(1, 1, "댕댕이코스", "몇월몇일"),
+            BadgeListData(1, 1, "댕댕이코스", "몇월몇일")
+        )
     )
 
     companion object{

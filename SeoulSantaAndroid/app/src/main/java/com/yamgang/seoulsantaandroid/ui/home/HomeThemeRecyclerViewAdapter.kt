@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.yamgang.seoulsantaandroid.R
+import com.yamgang.seoulsantaandroid.model.get.HomeThemeData
 
 class HomeThemeRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<HomeThemeData>): RecyclerView.Adapter<HomeThemeRecyclerViewAdapter.Holder>() {
 

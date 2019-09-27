@@ -1,4 +1,4 @@
-package com.yamgang.seoulsantaandroid.ui.home
+package com.yamgang.seoulsantaandroid.model.get
 
 data class GetHomeResponse (
     var message: String,

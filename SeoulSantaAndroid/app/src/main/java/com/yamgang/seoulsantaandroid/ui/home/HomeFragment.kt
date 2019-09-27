@@ -10,6 +10,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.yamgang.seoulsantaandroid.R
+import com.yamgang.seoulsantaandroid.model.get.GetHomeResponse
+import com.yamgang.seoulsantaandroid.model.get.HomeData
+import com.yamgang.seoulsantaandroid.model.get.HomeThemeData
 import com.yamgang.seoulsantaandroid.ui.MyActivity
 import com.yamgang.seoulsantaandroid.util.ApplicationController
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -21,7 +24,8 @@ import java.lang.Exception
 class HomeFragment : Fragment() {
 
     var dataList: ArrayList<HomeThemeData> = ArrayList()
-    var data : HomeData = HomeData("흐림","즐거운 등산되시던가~",dataList)
+    var data : HomeData =
+        HomeData("흐림", "즐거운 등산되시던가~", dataList)
     lateinit var homeThemeRecyclerViewAdapter: HomeThemeRecyclerViewAdapter
     val networkService = ApplicationController.networkService
 

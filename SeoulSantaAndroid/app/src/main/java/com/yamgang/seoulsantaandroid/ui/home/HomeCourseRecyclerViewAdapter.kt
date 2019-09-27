@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.yamgang.seoulsantaandroid.R
+import com.yamgang.seoulsantaandroid.model.get.HomeCourseData
 
 class HomeCourseRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<HomeCourseData>): RecyclerView.Adapter<HomeCourseRecyclerViewAdapter.Holder>() {
 
