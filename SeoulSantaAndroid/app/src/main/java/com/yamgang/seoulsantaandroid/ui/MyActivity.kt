@@ -3,7 +3,10 @@ package com.yamgang.seoulsantaandroid.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.yamgang.seoulsantaandroid.R
+import com.yamgang.seoulsantaandroid.ui.login.LoginActivity
+import com.yamgang.seoulsantaandroid.util.User
 import kotlinx.android.synthetic.main.activity_my.*
+import org.jetbrains.anko.startActivity
 
 class MyActivity : AppCompatActivity() {
 
@@ -16,7 +19,6 @@ class MyActivity : AppCompatActivity() {
 
     private fun viewInit() {
         tv_act_my_name.text = "으밍"
-        tv_act_my_id.text = "eumiing"
         tv_act_my_version.text = "최신 "+"1.0.0"+" 사용중"
     }
 
@@ -24,8 +26,13 @@ class MyActivity : AppCompatActivity() {
         btn_act_my_profile_modify.setOnClickListener {
             //프로필 수정
         }
-        btn_act_my_login_info.setOnClickListener {
-            //로그인 정보
+        btn_act_my_logout.setOnClickListener {
+            User.authorization = null
+            User.refreshtoken = null
+            startActivity<LoginActivity>()
+            finish()
+            val mainActivity = MainActivity()
+            mainActivity.finish()
         }
         btn_act_my_setting.setOnClickListener {
             //설정

@@ -1,16 +1,8 @@
 package com.yamgang.seoulsantaandroid.util
 
-import android.content.Context
 import com.kakao.auth.*
-import com.kakao.auth.IApplicationConfig
-import android.app.Activity
 
-
-
-
-
-class KaKaoSDKAdapter : KakaoAdapter() {
-
+class KaKaoSDKAdapter: KakaoAdapter(){
     // 로그인 시 사용 될, Session의 옵션 설정을 위한 인터페이스 입니다.
     override fun getSessionConfig(): ISessionConfig {
         return object : ISessionConfig {
@@ -31,10 +23,10 @@ class KaKaoSDKAdapter : KakaoAdapter() {
                 return false
             }
 
-//            // 로그인 시 토큰을 저장할 때의 암호화 여부를 지정합니다.
-//            override fun isSecureMode(): Boolean {
-//                return false
-//            }
+            // 로그인 시 토큰을 저장할 때의 암호화 여부를 지정합니다.
+            override fun isSecureMode(): Boolean {
+                return false
+            }
 
             // 일반 사용자가 아닌 Kakao와 제휴 된 앱에서 사용되는 값입니다.
             // 값을 지정하지 않을 경우, ApprovalType.INDIVIDUAL 값으로 사용됩니다.
@@ -50,20 +42,7 @@ class KaKaoSDKAdapter : KakaoAdapter() {
     }
 
     // Application이 가지고 있는 정보를 얻기 위한 인터페이스 입니다.
-     override fun getApplicationConfig(): IApplicationConfig {
-        return object : IApplicationConfig {
-
-            override fun getTopActivity(): Activity {
-                return GlobalApplication.getCurrentActivity()
-            }
-
-            override fun getApplicationContext(): Context {
-                return GlobalApplication.globalApplicationContext
-            }
-        }
+    override fun getApplicationConfig(): IApplicationConfig {
+        return IApplicationConfig { GlobalApplication.globalApplicationContext }
     }
-
-
-
-
 }
