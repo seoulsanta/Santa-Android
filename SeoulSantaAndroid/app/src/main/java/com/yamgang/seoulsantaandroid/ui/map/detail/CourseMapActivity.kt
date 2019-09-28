@@ -37,7 +37,10 @@ import android.provider.Settings
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.yamgang.seoulsantaandroid.model.BadgeRegister
+import com.yamgang.seoulsantaandroid.model.post.PostBadgeRegister
 import com.yamgang.seoulsantaandroid.ui.MainActivity
+import com.yamgang.seoulsantaandroid.util.User
 
 
 class CourseMapActivity : AppCompatActivity() {
@@ -128,12 +131,12 @@ class CourseMapActivity : AppCompatActivity() {
         }
         btn_end.setOnClickListener {
             //등산 끝내기 눌렀을 때 -> current location이 저장된 데이터의 마지막인덱스의 위도 경도 의 일정범위내에 속하는지 확인
-            endHiking()
+            endHiking(course_idx)
         }
 
     }
 
-    fun endHiking(){
+    fun endHiking(course_idx: Int){
 
        var location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER) //빨간줄 무시해라
         if(location!=null){
@@ -144,8 +147,10 @@ class CourseMapActivity : AppCompatActivity() {
                 (long>=dataList[dataList.size-1].longitude-0.001&&long<=dataList[dataList.size-1].longitude+0.001)){
                 Toast.makeText(applicationContext,"완주를 축하합니다! 뱃지가 등록되었습니다.",Toast.LENGTH_SHORT).show()
                 //뱃지등록 API 넣기@@@@@@@@@@@@@@@@@@@
+                badgeRegister(course_idx,User.authorization)
 
             }else{
+
                 Toast.makeText(applicationContext,"아직 목표지점에 도착하지 않았습니다.",Toast.LENGTH_SHORT).show()
             }
 
@@ -154,6 +159,28 @@ class CourseMapActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    fun badgeRegister(course_idx: Int,token:String?){
+        val courseIdx = BadgeRegister(course_idx)
+        val postBadgeRegister = networkService.postBadgeRegister("application/json",token,courseIdx)
+        postBadgeRegister.enqueue(object:Callback<PostBadgeRegister>{
+            override fun onFailure(call: Call<PostBadgeRegister>, t: Throwable) {
+
+            }
+
+            override fun onResponse(call: Call<PostBadgeRegister>, response: Response<PostBadgeRegister>) {
+                if(response.isSuccessful){
+                    Toast.makeText(applicationContext,"호쨔~",Toast.LENGTH_SHORT).show()
+
+
+                }else{
+
+                }
+
+            }
+
+        })
     }
 
 
