@@ -47,7 +47,7 @@ class MapFragment : Fragment() {
     }
 
     /*
-    1.불암산
+   1.불암산
     2.수락산
     3.도봉산
     4.북한산
@@ -56,12 +56,11 @@ class MapFragment : Fragment() {
     7.안산
     8.백련산
     9.봉제산
-    10.용마산
-    11.관악산
-    12.우면산
-    13.구룡산
-    14.남산
-    15.아차산
+    10.관악산
+    11.우면산
+    12.구룡산
+    13.남산
+    14.아차산
      */
 
     fun clickEvent(v:View){
@@ -72,6 +71,20 @@ class MapFragment : Fragment() {
 
             v.dw_bulam.visibility = View.VISIBLE
 
+            v.dw_sulak.visibility = View.INVISIBLE
+            v.dw_ansan.visibility = View.INVISIBLE
+            v.dw_bukak.visibility = View.INVISIBLE
+            v.dw_dobong.visibility = View.INVISIBLE
+            v.dw_namsan.visibility = View.INVISIBLE
+            v.up_acha.visibility = View.INVISIBLE
+            v.up_baengnyeon.visibility = View.INVISIBLE
+            v.up_bongge.visibility = View.INVISIBLE
+            v.up_bukhan.visibility = View.INVISIBLE
+            v.up_guryong.visibility = View.INVISIBLE
+            v.up_gwanak.visibility = View.INVISIBLE
+            v.up_inwang.visibility = View.INVISIBLE
+            v.up_umyeon.visibility = View.INVISIBLE
+
             viewCourses(1)
 
         }
@@ -80,8 +93,21 @@ class MapFragment : Fragment() {
             v.tv_click_mt.visibility = View.INVISIBLE
             v.rcv_map.visibility = View.VISIBLE
 
-            v.dw_bulam.visibility = View.INVISIBLE
             v.dw_sulak.visibility = View.VISIBLE
+
+            v.dw_bulam.visibility = View.INVISIBLE
+            v.dw_ansan.visibility = View.INVISIBLE
+            v.dw_bukak.visibility = View.INVISIBLE
+            v.dw_dobong.visibility = View.INVISIBLE
+            v.dw_namsan.visibility = View.INVISIBLE
+            v.up_acha.visibility = View.INVISIBLE
+            v.up_baengnyeon.visibility = View.INVISIBLE
+            v.up_bongge.visibility = View.INVISIBLE
+            v.up_bukhan.visibility = View.INVISIBLE
+            v.up_guryong.visibility = View.INVISIBLE
+            v.up_gwanak.visibility = View.INVISIBLE
+            v.up_inwang.visibility = View.INVISIBLE
+            v.up_umyeon.visibility = View.INVISIBLE
 
             viewCourses(2)
 
@@ -91,6 +117,22 @@ class MapFragment : Fragment() {
             v.tv_click_mt.visibility = View.INVISIBLE
             v.rcv_map.visibility = View.VISIBLE
 
+            v.dw_dobong.visibility = View.VISIBLE
+
+            v.dw_sulak.visibility = View.INVISIBLE
+            v.dw_bulam.visibility = View.INVISIBLE
+            v.dw_ansan.visibility = View.INVISIBLE
+            v.dw_bukak.visibility = View.INVISIBLE
+            v.dw_namsan.visibility = View.INVISIBLE
+            v.up_acha.visibility = View.INVISIBLE
+            v.up_baengnyeon.visibility = View.INVISIBLE
+            v.up_bongge.visibility = View.INVISIBLE
+            v.up_bukhan.visibility = View.INVISIBLE
+            v.up_guryong.visibility = View.INVISIBLE
+            v.up_gwanak.visibility = View.INVISIBLE
+            v.up_inwang.visibility = View.INVISIBLE
+            v.up_umyeon.visibility = View.INVISIBLE
+
             viewCourses(3)
 
         }
@@ -98,6 +140,22 @@ class MapFragment : Fragment() {
             v.big_mountain.visibility = View.INVISIBLE
             v.tv_click_mt.visibility = View.INVISIBLE
             v.rcv_map.visibility = View.VISIBLE
+
+            v.up_bukhan.visibility = View.VISIBLE
+
+            v.dw_bukak.visibility = View.INVISIBLE
+            v.dw_dobong.visibility = View.INVISIBLE
+            v.dw_sulak.visibility = View.INVISIBLE
+            v.dw_bulam.visibility = View.INVISIBLE
+            v.dw_ansan.visibility = View.INVISIBLE
+            v.dw_namsan.visibility = View.INVISIBLE
+            v.up_acha.visibility = View.INVISIBLE
+            v.up_baengnyeon.visibility = View.INVISIBLE
+            v.up_bongge.visibility = View.INVISIBLE
+            v.up_guryong.visibility = View.INVISIBLE
+            v.up_gwanak.visibility = View.INVISIBLE
+            v.up_inwang.visibility = View.INVISIBLE
+            v.up_umyeon.visibility = View.INVISIBLE
 
             viewCourses(4)
 
@@ -107,6 +165,22 @@ class MapFragment : Fragment() {
             v.tv_click_mt.visibility = View.INVISIBLE
             v.rcv_map.visibility = View.VISIBLE
 
+            v.dw_bukak.visibility = View.VISIBLE
+
+            v.dw_dobong.visibility = View.INVISIBLE
+            v.dw_sulak.visibility = View.INVISIBLE
+            v.dw_bulam.visibility = View.INVISIBLE
+            v.dw_ansan.visibility = View.INVISIBLE
+            v.dw_namsan.visibility = View.INVISIBLE
+            v.up_acha.visibility = View.INVISIBLE
+            v.up_baengnyeon.visibility = View.INVISIBLE
+            v.up_bongge.visibility = View.INVISIBLE
+            v.up_bukhan.visibility = View.INVISIBLE
+            v.up_guryong.visibility = View.INVISIBLE
+            v.up_gwanak.visibility = View.INVISIBLE
+            v.up_inwang.visibility = View.INVISIBLE
+            v.up_umyeon.visibility = View.INVISIBLE
+
             viewCourses(5)
 
         }
@@ -114,6 +188,22 @@ class MapFragment : Fragment() {
             v.big_mountain.visibility = View.INVISIBLE
             v.tv_click_mt.visibility = View.INVISIBLE
             v.rcv_map.visibility = View.VISIBLE
+
+            v.up_inwang.visibility = View.VISIBLE
+
+            v.dw_bukak.visibility = View.INVISIBLE
+            v.dw_dobong.visibility = View.INVISIBLE
+            v.dw_sulak.visibility = View.INVISIBLE
+            v.dw_bulam.visibility = View.INVISIBLE
+            v.dw_ansan.visibility = View.INVISIBLE
+            v.dw_namsan.visibility = View.INVISIBLE
+            v.up_acha.visibility = View.INVISIBLE
+            v.up_baengnyeon.visibility = View.INVISIBLE
+            v.up_bongge.visibility = View.INVISIBLE
+            v.up_bukhan.visibility = View.INVISIBLE
+            v.up_guryong.visibility = View.INVISIBLE
+            v.up_gwanak.visibility = View.INVISIBLE
+            v.up_umyeon.visibility = View.INVISIBLE
 
             viewCourses(6)
 
@@ -123,6 +213,22 @@ class MapFragment : Fragment() {
             v.tv_click_mt.visibility = View.INVISIBLE
             v.rcv_map.visibility = View.VISIBLE
 
+            v.dw_ansan.visibility = View.VISIBLE
+
+            v.up_inwang.visibility = View.INVISIBLE
+            v.dw_bukak.visibility = View.INVISIBLE
+            v.dw_dobong.visibility = View.INVISIBLE
+            v.dw_sulak.visibility = View.INVISIBLE
+            v.dw_bulam.visibility = View.INVISIBLE
+            v.dw_namsan.visibility = View.INVISIBLE
+            v.up_acha.visibility = View.INVISIBLE
+            v.up_baengnyeon.visibility = View.INVISIBLE
+            v.up_bongge.visibility = View.INVISIBLE
+            v.up_bukhan.visibility = View.INVISIBLE
+            v.up_guryong.visibility = View.INVISIBLE
+            v.up_gwanak.visibility = View.INVISIBLE
+            v.up_umyeon.visibility = View.INVISIBLE
+
             viewCourses(7)
 
         }
@@ -130,6 +236,22 @@ class MapFragment : Fragment() {
             v.big_mountain.visibility = View.INVISIBLE
             v.tv_click_mt.visibility = View.INVISIBLE
             v.rcv_map.visibility = View.VISIBLE
+
+            v.up_baengnyeon.visibility = View.VISIBLE
+
+            v.dw_ansan.visibility = View.INVISIBLE
+            v.up_inwang.visibility = View.INVISIBLE
+            v.dw_bukak.visibility = View.INVISIBLE
+            v.dw_dobong.visibility = View.INVISIBLE
+            v.dw_sulak.visibility = View.INVISIBLE
+            v.dw_bulam.visibility = View.INVISIBLE
+            v.dw_namsan.visibility = View.INVISIBLE
+            v.up_acha.visibility = View.INVISIBLE
+            v.up_bongge.visibility = View.INVISIBLE
+            v.up_bukhan.visibility = View.INVISIBLE
+            v.up_guryong.visibility = View.INVISIBLE
+            v.up_gwanak.visibility = View.INVISIBLE
+            v.up_umyeon.visibility = View.INVISIBLE
 
             viewCourses(8)
 
@@ -139,23 +261,48 @@ class MapFragment : Fragment() {
             v.tv_click_mt.visibility = View.INVISIBLE
             v.rcv_map.visibility = View.VISIBLE
 
+            v.up_bongge.visibility = View.VISIBLE
+
+            v.up_baengnyeon.visibility = View.INVISIBLE
+            v.dw_ansan.visibility = View.INVISIBLE
+            v.up_inwang.visibility = View.INVISIBLE
+            v.dw_bukak.visibility = View.INVISIBLE
+            v.dw_dobong.visibility = View.INVISIBLE
+            v.dw_sulak.visibility = View.INVISIBLE
+            v.dw_bulam.visibility = View.INVISIBLE
+            v.dw_namsan.visibility = View.INVISIBLE
+            v.up_acha.visibility = View.INVISIBLE
+            v.up_bukhan.visibility = View.INVISIBLE
+            v.up_guryong.visibility = View.INVISIBLE
+            v.up_gwanak.visibility = View.INVISIBLE
+            v.up_umyeon.visibility = View.INVISIBLE
+
             viewCourses(9)
 
         }
-        v.yongma.setOnClickListener {
-            v.big_mountain.visibility = View.INVISIBLE
-            v.tv_click_mt.visibility = View.INVISIBLE
-            v.rcv_map.visibility = View.VISIBLE
 
-            viewCourses(10)
-
-        }
         v.gwanak.setOnClickListener {
             v.big_mountain.visibility = View.INVISIBLE
             v.tv_click_mt.visibility = View.INVISIBLE
             v.rcv_map.visibility = View.VISIBLE
 
-            viewCourses(11)
+            v.up_gwanak.visibility = View.VISIBLE
+
+            v.up_bongge.visibility = View.INVISIBLE
+            v.up_baengnyeon.visibility = View.INVISIBLE
+            v.dw_ansan.visibility = View.INVISIBLE
+            v.up_inwang.visibility = View.INVISIBLE
+            v.dw_bukak.visibility = View.INVISIBLE
+            v.dw_dobong.visibility = View.INVISIBLE
+            v.dw_sulak.visibility = View.INVISIBLE
+            v.dw_bulam.visibility = View.INVISIBLE
+            v.dw_namsan.visibility = View.INVISIBLE
+            v.up_acha.visibility = View.INVISIBLE
+            v.up_bukhan.visibility = View.INVISIBLE
+            v.up_guryong.visibility = View.INVISIBLE
+            v.up_umyeon.visibility = View.INVISIBLE
+
+            viewCourses(10)
 
         }
         v.umyeon.setOnClickListener {
@@ -163,7 +310,23 @@ class MapFragment : Fragment() {
             v.tv_click_mt.visibility = View.INVISIBLE
             v.rcv_map.visibility = View.VISIBLE
 
-            viewCourses(12)
+            v.up_umyeon.visibility = View.VISIBLE
+
+            v.up_gwanak.visibility = View.INVISIBLE
+            v.up_bongge.visibility = View.INVISIBLE
+            v.up_baengnyeon.visibility = View.INVISIBLE
+            v.dw_ansan.visibility = View.INVISIBLE
+            v.up_inwang.visibility = View.INVISIBLE
+            v.dw_bukak.visibility = View.INVISIBLE
+            v.dw_dobong.visibility = View.INVISIBLE
+            v.dw_sulak.visibility = View.INVISIBLE
+            v.dw_bulam.visibility = View.INVISIBLE
+            v.dw_namsan.visibility = View.INVISIBLE
+            v.up_acha.visibility = View.INVISIBLE
+            v.up_bukhan.visibility = View.INVISIBLE
+            v.up_guryong.visibility = View.INVISIBLE
+
+            viewCourses(11)
 
         }
         v.guryong.setOnClickListener {
@@ -171,7 +334,23 @@ class MapFragment : Fragment() {
             v.tv_click_mt.visibility = View.INVISIBLE
             v.rcv_map.visibility = View.VISIBLE
 
-            viewCourses(13)
+            v.up_guryong.visibility = View.VISIBLE
+
+            v.up_umyeon.visibility = View.INVISIBLE
+            v.up_gwanak.visibility = View.INVISIBLE
+            v.up_bongge.visibility = View.INVISIBLE
+            v.up_baengnyeon.visibility = View.INVISIBLE
+            v.dw_ansan.visibility = View.INVISIBLE
+            v.up_inwang.visibility = View.INVISIBLE
+            v.dw_bukak.visibility = View.INVISIBLE
+            v.dw_dobong.visibility = View.INVISIBLE
+            v.dw_sulak.visibility = View.INVISIBLE
+            v.dw_bulam.visibility = View.INVISIBLE
+            v.dw_namsan.visibility = View.INVISIBLE
+            v.up_acha.visibility = View.INVISIBLE
+            v.up_bukhan.visibility = View.INVISIBLE
+
+            viewCourses(12)
 
         }
         v.namsan.setOnClickListener {
@@ -179,7 +358,23 @@ class MapFragment : Fragment() {
             v.tv_click_mt.visibility = View.INVISIBLE
             v.rcv_map.visibility = View.VISIBLE
 
-            viewCourses(14)
+            v.dw_namsan.visibility = View.VISIBLE
+
+            v.up_guryong.visibility = View.INVISIBLE
+            v.up_umyeon.visibility = View.INVISIBLE
+            v.up_gwanak.visibility = View.INVISIBLE
+            v.up_bongge.visibility = View.INVISIBLE
+            v.up_baengnyeon.visibility = View.INVISIBLE
+            v.dw_ansan.visibility = View.INVISIBLE
+            v.up_inwang.visibility = View.INVISIBLE
+            v.dw_bukak.visibility = View.INVISIBLE
+            v.dw_dobong.visibility = View.INVISIBLE
+            v.dw_sulak.visibility = View.INVISIBLE
+            v.dw_bulam.visibility = View.INVISIBLE
+            v.up_acha.visibility = View.INVISIBLE
+            v.up_bukhan.visibility = View.INVISIBLE
+
+            viewCourses(13)
 
         }
         v.acha.setOnClickListener {
@@ -187,11 +382,25 @@ class MapFragment : Fragment() {
             v.tv_click_mt.visibility = View.INVISIBLE
             v.rcv_map.visibility = View.VISIBLE
 
-            viewCourses(15)
+            v.up_acha.visibility = View.VISIBLE
+
+            v.dw_namsan.visibility = View.INVISIBLE
+            v.up_guryong.visibility = View.INVISIBLE
+            v.up_umyeon.visibility = View.INVISIBLE
+            v.up_gwanak.visibility = View.INVISIBLE
+            v.up_bongge.visibility = View.INVISIBLE
+            v.up_baengnyeon.visibility = View.INVISIBLE
+            v.dw_ansan.visibility = View.INVISIBLE
+            v.up_inwang.visibility = View.INVISIBLE
+            v.dw_bukak.visibility = View.INVISIBLE
+            v.dw_dobong.visibility = View.INVISIBLE
+            v.dw_sulak.visibility = View.INVISIBLE
+            v.dw_bulam.visibility = View.INVISIBLE
+            v.up_bukhan.visibility = View.INVISIBLE
+
+            viewCourses(14)
 
         }
-
-        //요런식으로 산 15개(?) 까지..
 
     }
 
