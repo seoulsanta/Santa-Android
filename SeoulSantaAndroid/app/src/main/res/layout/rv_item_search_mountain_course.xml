@@ -7,10 +7,11 @@
 
     <TextView
             android:textSize="14sp"
-            android:textColor="#000000"
+            android:textColor="@android:color/black"
             android:letterSpacing="-0.08"
             android:lineSpacingExtra="8sp"
             android:text="혜진현무 등산코스 "
+            android:fontFamily="@font/kopubworlddotumlight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_rv_search_result_course" app:layout_constraintTop_toTopOf="parent"
