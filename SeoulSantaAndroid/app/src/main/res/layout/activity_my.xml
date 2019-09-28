@@ -65,30 +65,19 @@
             android:layout_marginVertical="7dp">
         <TextView
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:text="로그인 정보"
+                android:text="로그아웃"
                 android:textSize="14dp"
                 android:layout_centerVertical="true"
                 android:includeFontPadding="false"
                 android:textColor="@color/textBlack"
                 android:fontFamily="@font/kopubworlddotumlight"/>
         <ImageView
-                android:id="@+id/btn_act_my_login_info"
+                android:id="@+id/btn_act_my_logout"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:src="@drawable/icon_right"
                 android:layout_alignParentRight="true"
                 android:padding="10dp"/>
-        <TextView
-                android:id="@+id/tv_act_my_id"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:textColor="@color/colorMain"
-                android:textSize="14dp"
-                android:text="eumiing"
-                android:includeFontPadding="false"
-                android:layout_centerVertical="true"
-                android:fontFamily="@font/kopubworlddotumlight"
-                android:layout_toLeftOf="@id/btn_act_my_login_info"
-                android:layout_marginRight="2dp"/>
     </RelativeLayout>
 
     <RelativeLayout
