@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,36 +9,53 @@
         android:orientation="vertical">
 
     <ImageView
+            android:layout_alignParentTop="true"
             android:id="@+id/img_mt_present"
-            android:layout_width="match_parent"
-            android:layout_height="341dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@drawable/mountain_img"/>
 
-    <TextView
-            android:id="@+id/mt_name"
-            android:layout_marginTop="28dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="wrap_content"
+    <LinearLayout
+            android:id="@+id/text_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="349dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textColor="#000000"
-            android:fontFamily="@font/kopubworlddotummedium"
-            android:text="북한산"/>
-    <TextView
-            android:id="@+id/mt_content"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:textColor="#000000"
-            android:fontFamily="@font/kopubworlddotumlight"
-            android:text="어쩌고 저쩌고 최고 등산코스"/>
+            android:orientation="vertical">
+
+
+        <TextView
+                android:id="@+id/mt_name"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/kopubworlddotummedium"
+                android:text="북한산"/>
+        <TextView
+                android:id="@+id/mt_content"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="40dp"
+                android:paddingLeft="40dp"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/kopubworlddotumlight"
+                android:text="서울 노원구. 사찰로는 불암사가 있으며 정상부분 전체가 바위로 이루어진 산"/>
+
+
+    </LinearLayout>
 
     <RelativeLayout
+            android:id="@+id/course"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:layout_marginTop="31dp"
+            android:layout_below="@+id/text_layout"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="70dp">
         <ImageView
@@ -55,7 +72,7 @@
                 android:layout_width="170dp"
                 android:layout_height="55dp"
                 android:orientation="vertical"
-                 android:weightSum="3">
+                android:weightSum="3">
             <TextView
                     android:id="@+id/course_name"
                     android:layout_width="wrap_content"
@@ -88,6 +105,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
@@ -114,10 +132,12 @@
 
     </RelativeLayout>
 
+
     <RelativeLayout
             android:id="@+id/btn_start_course"
-            android:layout_marginTop="55dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/course"
+            android:layout_marginTop="39dp"
+            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_green">
@@ -133,4 +153,5 @@
     </RelativeLayout>
 
 
-</LinearLayout>
+
+</RelativeLayout>
