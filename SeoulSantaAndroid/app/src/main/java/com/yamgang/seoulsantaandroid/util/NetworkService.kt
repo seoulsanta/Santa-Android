@@ -1,18 +1,16 @@
 package com.yamgang.seoulsantaandroid.util
 
+import com.yamgang.seoulsantaandroid.model.BadgeRegister
 import com.yamgang.seoulsantaandroid.model.get.*
 import com.yamgang.seoulsantaandroid.model.get.GetBadgeResponse
 import com.yamgang.seoulsantaandroid.model.get.GetHomeResponse
 import com.yamgang.seoulsantaandroid.model.get.GetCourse
 import com.yamgang.seoulsantaandroid.model.get.GetCourseDetail
 import com.yamgang.seoulsantaandroid.model.get.GetMountain
+import com.yamgang.seoulsantaandroid.model.post.PostBadgeRegister
 import com.yamgang.seoulsantaandroid.model.post.PostKakaoLoginResponse
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.POST
-import retrofit2.http.Path
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface NetworkService {
     //홈
@@ -28,22 +26,28 @@ interface NetworkService {
         @Header("Authorization") token: String?
     ): Call<GetBadgeResponse>
 
+    //뱃지 등록
+    @POST("/user/badge")
+    fun postBadgeRegister(@Header("Content-Type") contentType: String = "application/json",
+                          @Header("Authorization") token: String?,
+                          @Body badgeRegister: BadgeRegister ):Call<PostBadgeRegister>
+
 
     //맵
     //1.산 조회
     @GET("/mountain/{mountain_idx}")
     fun getMountain(@Header("Content-Type") contentType: String = "application/json",
-                          @Path("mountain_idx")mountain_idx:Int): Call<GetMountain>
+                    @Path("mountain_idx")mountain_idx:Int): Call<GetMountain>
 
     //2.코스 조회
     @GET("/course/{course_idx}")
     fun getCourse(@Header("Content-Type") contentType: String = "application/json",
-                          @Path("course_idx")course_idx:Int):Call<GetCourse>
+                  @Path("course_idx")course_idx:Int):Call<GetCourse>
 
     //3.코스 길 조회
     @GET("/course/{course_idx}/line")
     fun getCourseDetail(@Header("Content-Type") contentType: String = "application/json",
-                  @Path("course_idx")course_idx:Int):Call<GetCourseDetail>
+                        @Path("course_idx")course_idx:Int):Call<GetCourseDetail>
 
     //카카오 로그인
     @POST("/login/kakao")
