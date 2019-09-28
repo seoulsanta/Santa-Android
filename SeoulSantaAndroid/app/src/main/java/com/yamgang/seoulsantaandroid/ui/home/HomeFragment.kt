@@ -13,7 +13,7 @@ import com.yamgang.seoulsantaandroid.R
 import com.yamgang.seoulsantaandroid.model.get.GetHomeResponse
 import com.yamgang.seoulsantaandroid.model.get.HomeData
 import com.yamgang.seoulsantaandroid.model.get.HomeThemeData
-import com.yamgang.seoulsantaandroid.ui.MyActivity
+import com.yamgang.seoulsantaandroid.ui.my.MyActivity
 import com.yamgang.seoulsantaandroid.util.ApplicationController
 import kotlinx.android.synthetic.main.fragment_home.*
 import retrofit2.Call

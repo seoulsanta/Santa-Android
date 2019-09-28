@@ -5,14 +5,14 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.MyActivity"
+        tools:context=".ui.my.MyActivity"
         android:background="#ffffff"
         android:orientation="vertical">
     <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:background="#ffffff"
-            app:cardElevation="10dp"
+            app:cardElevation="5dp"
             app:cardCornerRadius="0dp">
         <ImageView
                 android:layout_width="wrap_content"
@@ -20,15 +20,27 @@
                 android:src="@drawable/logo_main"
                 android:layout_gravity="center"/>
     </androidx.cardview.widget.CardView>
-
-    <ImageView
-            android:id="@+id/iv_act_my_profile"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/profile"
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="59dp"/>
+            android:layout_marginTop="59dp">
+        <ImageView
+                android:id="@+id/iv_act_my_profile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile"/>
+        <ImageView
+                android:id="@+id/btn_act_my_edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_picup"
+                android:layout_alignBottom="@id/iv_act_my_profile"
+                android:layout_alignRight="@id/iv_act_my_profile"
+                android:visibility="gone"/>
+    </RelativeLayout>
+
     <TextView
             android:id="@+id/tv_act_my_name"
             android:layout_width="wrap_content"
@@ -39,7 +51,20 @@
             android:textColor="@color/badgeTitleText"
             android:fontFamily="@font/kopubworlddotumlight"
             android:layout_gravity="center_horizontal"/>
+    <EditText
+            android:id="@+id/et_act_my_name_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="바꿀 이름을 입력하세요."
+            android:layout_marginTop="8dp"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:textColor="@color/badgeTitleText"
+            android:fontFamily="@font/kopubworlddotumlight"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
     <RelativeLayout
+            android:id="@+id/btn_act_my_profile_modify"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_16dp_green_border"
@@ -47,7 +72,6 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="40dp">
         <TextView
-                android:id="@+id/btn_act_my_profile_modify"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="프로필 수정"
                 android:textSize="14dp"
@@ -56,6 +80,26 @@
                 android:includeFontPadding="false"
                 android:layout_marginVertical="4dp"
                 android:layout_marginHorizontal="10dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:id="@+id/btn_act_my_profile_modify_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_16dp_green_border"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="40dp"
+            android:visibility="gone">
+        <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="프로필 수정 완료"
+                android:textSize="14dp"
+                android:textColor="@color/colorMain"
+                android:fontFamily="@font/kopubworlddotumlight"
+                android:includeFontPadding="false"
+                android:layout_marginVertical="4dp"
+                android:layout_marginHorizontal="10dp"/>
+
     </RelativeLayout>
     <RelativeLayout
             android:layout_width="match_parent"

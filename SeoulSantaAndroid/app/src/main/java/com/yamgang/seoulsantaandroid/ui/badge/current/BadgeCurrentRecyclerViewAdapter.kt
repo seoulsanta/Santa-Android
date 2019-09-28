@@ -27,11 +27,12 @@ class BadgeCurrentRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<
                 .load(R.drawable.badge_get)
                 .into(holder.img)
             //뱃지 클릭할 시,
+            val date_split = dataList[position].date
             holder.img.setOnClickListener {
                 val dialog = BadgeCurrentDialogFragment()
                 dialog.show((ctx as MainActivity).supportFragmentManager,dialog.tag)
                 BadgeCurrentFragment.instance.course_name = dataList[position].course_name
-                BadgeCurrentFragment.instance.date = dataList[position].date
+                BadgeCurrentFragment.instance.date = date_split.substring(0,4)+"년 "+date_split.substring(5,7)+"월 "+date_split.substring(8,10)+"일"
                 Log.e("BadgeCurrentRV", "Badge")
             }
         } else{

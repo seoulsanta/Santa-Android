@@ -63,6 +63,8 @@ dependencies {
     implementation 'com.ryanjeffreybrooks:indefinitepagerindicator:1.0.10'
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
 
+    //permission
+    implementation "gun0912.ted:tedpermission:2.1.0"
 
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
     implementation files('libs/libDaumMapAndroid.jar')

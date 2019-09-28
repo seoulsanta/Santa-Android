@@ -21,7 +21,8 @@ class BadgeFinishRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<B
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.name.text = dataList[position].course_name
         //나중에 나누기
-        holder.date.text = dataList[position].date
+        val date_split = dataList[position].date
+        holder.date.text=date_split.substring(0,4)+"."+date_split.substring(5,7)+"."+date_split.substring(8,10)+"  "+date_split.substring(11,13)+":"+date_split.substring(14,16)
         holder.view.setOnClickListener {
             //완주한 fragment 띄우기
         }
