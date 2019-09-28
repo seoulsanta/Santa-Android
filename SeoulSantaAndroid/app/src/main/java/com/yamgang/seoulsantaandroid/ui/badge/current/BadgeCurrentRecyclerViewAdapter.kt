@@ -1,6 +1,7 @@
 package com.yamgang.seoulsantaandroid.ui.badge.current
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.yamgang.seoulsantaandroid.R
 import com.yamgang.seoulsantaandroid.ui.MainActivity
 import com.yamgang.seoulsantaandroid.model.get.BadgeListData
+import com.yamgang.seoulsantaandroid.ui.badge.BadgeFragment
 
 class BadgeCurrentRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<BadgeListData>, var total: Int): RecyclerView.Adapter<BadgeCurrentRecyclerViewAdapter.Holder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -30,11 +32,14 @@ class BadgeCurrentRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<
                 dialog.show((ctx as MainActivity).supportFragmentManager,dialog.tag)
                 BadgeCurrentFragment.instance.course_name = dataList[position].course_name
                 BadgeCurrentFragment.instance.date = dataList[position].date
+                Log.e("BadgeCurrentRV", "Badge")
             }
         } else{
             Glide.with(ctx)
                 .load(R.drawable.badge_default)
                 .into(holder.img)
+            Log.e("BadgeCurrentRV", "BadgeIn")
+
         }
     }
 

@@ -5,9 +5,11 @@ import com.yamgang.seoulsantaandroid.model.get.GetHomeResponse
 import com.yamgang.seoulsantaandroid.model.get.GetCourse
 import com.yamgang.seoulsantaandroid.model.get.GetCourseDetail
 import com.yamgang.seoulsantaandroid.model.get.GetMountain
+import com.yamgang.seoulsantaandroid.model.post.PostKakaoLoginResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header
+import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface NetworkService {
@@ -21,7 +23,7 @@ interface NetworkService {
     @GET("/user/badge")
     fun getBadgeResponse(
         @Header("Content-Type") content_type: String,
-        @Header("Authorization") token: String
+        @Header("Authorization") token: String?
     ): Call<GetBadgeResponse>
 
 
@@ -40,6 +42,14 @@ interface NetworkService {
     @GET("/course/{course_idx}/line")
     fun getCourseDetail(@Header("Content-Type") contentType: String = "application/json",
                   @Path("course_idx")course_idx:Int):Call<GetCourseDetail>
+
+    //카카오 로그인
+    @POST("/login/kakao")
+    fun postKakaoLoginResponse(
+        @Header("Content-Type") content_type: String?,
+        @Header("accesstoken") token: String?
+    ): Call<PostKakaoLoginResponse>
+
 
 
 }
