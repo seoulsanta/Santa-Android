@@ -23,66 +23,128 @@
                 android:id="@+id/map_background_layout"
                 android:layout_marginTop="75dp"
                 android:layout_centerHorizontal="true"
-                android:layout_width="311dp"
+                android:layout_width="340dp"
                 android:layout_height="240dp"
                 android:background="@drawable/map_background">
             <ImageView
-                    android:id="@+id/mt_1"
-                    android:layout_marginTop="48dp"
-                    android:layout_marginLeft="111dp"
+                    android:id="@+id/bulam"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="257.1dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:background="@drawable/mountain"/>
             <ImageView
-                    android:id="@+id/mt_2"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginLeft="200dp"
+                    android:id="@+id/dw_bulam"
+                    android:visibility="invisible"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginLeft="237.1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dw_bull"/>
+            <ImageView
+                    android:id="@+id/sulak"
+                    android:layout_marginLeft="233.4dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:background="@drawable/mountain"/>
             <ImageView
-                    android:id="@+id/mt_3"
+                    android:id="@+id/dw_sulak"
+                    android:visibility="invisible"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="207.1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dw_ok"/>
+            <ImageView
+                    android:id="@+id/dobong"
+                    android:layout_marginLeft="201.4dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+            <ImageView
+                    android:id="@+id/bukhan"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="176.1dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+            <ImageView
+                    android:id="@+id/bukak"
+                    android:layout_marginTop="69dp"
+                    android:layout_marginLeft="176.1dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+            <ImageView
+                    android:id="@+id/inwang"
                     android:layout_marginTop="83dp"
-                    android:layout_marginLeft="215dp"
+                    android:layout_marginLeft="155.6dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:background="@drawable/mountain"/>
             <ImageView
-                    android:id="@+id/mt_4"
-                    android:layout_marginTop="127dp"
-                    android:layout_marginLeft="220dp"
+                    android:id="@+id/ansan"
+                    android:layout_marginTop="92.7dp"
+                    android:layout_marginLeft="137.7dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:background="@drawable/mountain"/>
             <ImageView
-                    android:id="@+id/mt_5"
-                    android:layout_marginTop="128dp"
-                    android:layout_marginLeft="127dp"
+                    android:id="@+id/baengnyeon"
+                    android:layout_marginTop="69dp"
+                    android:layout_marginLeft="117.9dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:background="@drawable/mountain"/>
             <ImageView
-                    android:id="@+id/mt_6"
-                    android:layout_marginTop="163dp"
-                    android:layout_marginLeft="59dp"
+                    android:id="@+id/bongge"
+                    android:layout_marginTop="135.6dp"
+                    android:layout_marginLeft="100.2dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:background="@drawable/mountain"/>
             <ImageView
-                    android:id="@+id/mt_7"
-                    android:layout_marginTop="182dp"
-                    android:layout_marginLeft="175dp"
+                    android:id="@+id/yongma"
+                    android:layout_marginTop="170dp"
+                    android:layout_marginLeft="136.9dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:background="@drawable/mountain"/>
             <ImageView
-                    android:id="@+id/mt_8"
-                    android:layout_marginTop="169dp"
-                    android:layout_marginLeft="257dp"
+                    android:id="@+id/gwanak"
+                    android:layout_marginTop="216.8dp"
+                    android:layout_marginLeft="152.1dp"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:background="@drawable/mountain"/>
-
+            <ImageView
+                    android:id="@+id/umyeon"
+                    android:layout_marginTop="192.8dp"
+                    android:layout_marginLeft="198.9dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+            <ImageView
+                    android:id="@+id/guryong"
+                    android:layout_marginTop="202.8dp"
+                    android:layout_marginLeft="231.8dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+            <ImageView
+                    android:id="@+id/namsan"
+                    android:layout_marginTop="117.8dp"
+                    android:layout_marginLeft="186.9dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
+            <ImageView
+                    android:id="@+id/acha"
+                    android:layout_marginTop="112.8dp"
+                    android:layout_marginLeft="259.6dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/mountain"/>
 
         </RelativeLayout>
 

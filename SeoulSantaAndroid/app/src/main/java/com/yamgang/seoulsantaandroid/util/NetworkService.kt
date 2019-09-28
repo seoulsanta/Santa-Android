@@ -1,5 +1,6 @@
 package com.yamgang.seoulsantaandroid.util
 
+import com.yamgang.seoulsantaandroid.model.get.*
 import com.yamgang.seoulsantaandroid.model.get.GetBadgeResponse
 import com.yamgang.seoulsantaandroid.model.get.GetHomeResponse
 import com.yamgang.seoulsantaandroid.model.get.GetCourse
@@ -11,6 +12,7 @@ import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface NetworkService {
     //홈
@@ -51,5 +53,17 @@ interface NetworkService {
     ): Call<PostKakaoLoginResponse>
 
 
+    //서치
+    //1.  산 검색
+    @GET("/mountain/search")
+    fun getSearchMountain(
+        @Header("Content-Type") contentType: String = "application/json",
+        @Query("query") query: String
+    ):Call<GetSearchMountain>
 
+    //2. 추천 검색어
+    @GET("/mountain/recommend")
+    fun getMountainRecommend(
+        @Header("Content-Type") contentType: String = "application/json"
+    ):Call<GetMountainRecommend>
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,6 +8,8 @@
         tools:context=".ui.map.detail.CourseMapActivity"
         android:orientation="vertical">
     <RelativeLayout
+            android:id="@+id/logo_layout"
+            android:layout_alignParentTop="true"
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:background="#ffffff">
@@ -18,11 +20,54 @@
                 android:background="@drawable/santa_logo"/>
 
     </RelativeLayout>
+
     <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/logo_layout"
+            android:id="@+id/course_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_whiteback">
+        <ImageView
+                android:layout_marginLeft="8dp"
+                android:id="@+id/icon"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_cmoun"/>
+
+        <TextView
+                android:id="@+id/map_course_name"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_toRightOf="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:fontFamily="@font/kopubworlddotumlight"
+                android:textSize="14sp"
+                android:text=""/>
+
+    </RelativeLayout>
+    <ImageView
+            android:id="@+id/btn_end"
+            android:layout_marginBottom="21dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="92dp"
+            android:layout_height="32dp"
+            android:background="@drawable/icon_end"/>
+    <RelativeLayout
+            android:layout_below="@+id/logo_layout"
             android:id="@+id/mapview"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
     </RelativeLayout>
 
-</LinearLayout>
+
+
+</RelativeLayout>
