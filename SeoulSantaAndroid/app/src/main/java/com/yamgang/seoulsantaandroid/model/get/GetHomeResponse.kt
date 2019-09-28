@@ -1,4 +1,4 @@
-package com.yamgang.seoulsantaandroid.ui.home
+package com.yamgang.seoulsantaandroid.model.get
 
 data class GetHomeResponse (
     var message: String,
@@ -20,6 +20,5 @@ data class HomeThemeData(
 data class HomeCourseData(
     var course_idx: Int,
     var mountain_name: String,
-    //var mountain_img: String
-    var mountain_img: Int
+    var mountain_img: String
 )

@@ -1,4 +1,4 @@
-package com.yamgang.seoulsantaandroid.ui.home.Adapter
+package com.yamgang.seoulsantaandroid.ui.home
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,8 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.yamgang.seoulsantaandroid.R
-import com.yamgang.seoulsantaandroid.ui.home.HomeCourseData
-import com.yamgang.seoulsantaandroid.ui.home.HomeThemeData
+import com.yamgang.seoulsantaandroid.model.get.HomeThemeData
 
 class HomeThemeRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<HomeThemeData>): RecyclerView.Adapter<HomeThemeRecyclerViewAdapter.Holder>() {
 
@@ -25,7 +24,8 @@ class HomeThemeRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<Hom
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.title.text = dataList[position].theme_name
-        homeCourseRecyclerViewAdapter = HomeCourseRecyclerViewAdapter(ctx,dataList[position].course)
+        homeCourseRecyclerViewAdapter =
+            HomeCourseRecyclerViewAdapter(ctx, dataList[position].course)
         holder.list.adapter = homeCourseRecyclerViewAdapter
         holder.list.layoutManager = LinearLayoutManager(ctx, LinearLayout.HORIZONTAL, false)
     }

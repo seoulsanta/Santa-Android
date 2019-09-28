@@ -1,6 +1,11 @@
 package com.yamgang.seoulsantaandroid.util
 
 import com.yamgang.seoulsantaandroid.model.get.*
+import com.yamgang.seoulsantaandroid.model.get.GetBadgeResponse
+import com.yamgang.seoulsantaandroid.model.get.GetHomeResponse
+import com.yamgang.seoulsantaandroid.model.get.GetCourse
+import com.yamgang.seoulsantaandroid.model.get.GetCourseDetail
+import com.yamgang.seoulsantaandroid.model.get.GetMountain
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -8,6 +13,19 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface NetworkService {
+    //홈
+    @GET("/home")
+    fun getHomeResponse(
+        @Header("Content-Type") content_type: String
+    ): Call<GetHomeResponse>
+
+    //뱃지 조회
+    @GET("/user/badge")
+    fun getBadgeResponse(
+        @Header("Content-Type") content_type: String,
+        @Header("Authorization") token: String
+    ): Call<GetBadgeResponse>
+
 
     //맵
     //1.산 조회

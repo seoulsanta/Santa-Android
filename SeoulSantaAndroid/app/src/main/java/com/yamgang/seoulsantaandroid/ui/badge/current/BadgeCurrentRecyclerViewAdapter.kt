@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.yamgang.seoulsantaandroid.R
 import com.yamgang.seoulsantaandroid.ui.MainActivity
-import com.yamgang.seoulsantaandroid.ui.badge.BadgeListData
+import com.yamgang.seoulsantaandroid.model.get.BadgeListData
 
 class BadgeCurrentRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<BadgeListData>, var total: Int): RecyclerView.Adapter<BadgeCurrentRecyclerViewAdapter.Holder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
