@@ -18,7 +18,8 @@
     <LinearLayout
             android:id="@+id/text_layout"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="349dp"
+            android:layout_below="@+id/img_mt_present"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -54,22 +55,22 @@
             android:id="@+id/course"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:layout_below="@+id/text_layout"
-            android:layout_marginTop="20dp"
+            android:layout_above="@+id/btn_start_course"
+            android:layout_marginBottom="30dp"
             android:layout_width="match_parent"
             android:layout_height="70dp">
         <ImageView
                 android:id="@+id/img_course"
                 android:layout_alignParentLeft="true"
-                android:layout_width="160dp"
+                android:layout_width="110dp"
                 android:layout_height="70dp"
                 android:background="#bcbcbc"/>
 
         <LinearLayout
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="15dp"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/img_course"
-                android:layout_width="170dp"
+                android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:orientation="vertical"
                 android:weightSum="3">
@@ -80,16 +81,16 @@
                     android:layout_weight="1"
                     android:textSize="13sp"
                     android:textColor="#000000"
-                    android:fontFamily="@font/kopubworlddotumlight"
+                    android:fontFamily="@font/kopubworlddotumbold"
                     android:text="2코스"/>
             <RelativeLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
+                        android:textSize="10sp"
                         android:textColor="#000000"
                         android:fontFamily="@font/kopubworlddotumlight"
                         android:text="소요시간"/>
@@ -98,7 +99,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
+                        android:textSize="10sp"
                         android:textColor="#000000"
                         android:fontFamily="@font/kopubworlddotumlight"
                         android:text="약 3시간"/>
@@ -106,22 +107,22 @@
 
             <RelativeLayout
 
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
+                        android:textSize="10sp"
                         android:textColor="#000000"
                         android:fontFamily="@font/kopubworlddotumlight"
-                        android:text="코스난이도"/>
+                        android:text="코스난이도" android:layout_marginTop="0dp" android:layout_alignParentTop="true"/>
                 <TextView
                         android:id="@+id/course_degree"
                         android:layout_alignParentRight="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="12sp"
+                        android:textSize="10sp"
                         android:textColor="#000000"
                         android:fontFamily="@font/kopubworlddotumlight"
                         android:text="1시간"/>
@@ -135,8 +136,8 @@
 
     <RelativeLayout
             android:id="@+id/btn_start_course"
-            android:layout_below="@+id/course"
-            android:layout_marginTop="39dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

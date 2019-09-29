@@ -7,13 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.graphics.drawable.RoundedBitmapDrawable
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.BitmapImageViewTarget
 import com.yamgang.seoulsantaandroid.R
 import com.yamgang.seoulsantaandroid.model.Courses
 import com.yamgang.seoulsantaandroid.model.Mountain
 import com.yamgang.seoulsantaandroid.ui.map.detail.CourseDetailActivity
 import com.yamgang.seoulsantaandroid.ui.search.adapter.SearchResultCourseRVAdapter
+import android.graphics.drawable.GradientDrawable
+
+
 
 class MapRVAdapter(private val ctx: Context, var dataList: ArrayList<Courses>)
     : RecyclerView.Adapter<MapRVAdapter.Holder>(){
@@ -28,9 +33,16 @@ class MapRVAdapter(private val ctx: Context, var dataList: ArrayList<Courses>)
         holder.courseName.text = dataList[position].course_name
         holder.courseTime.text = dataList[position].time
         holder.courseDegree.text = dataList[position].degree
-//        Glide.with(ctx)
-//            .load(dataList[position].course_img)
-//            .into(holder.courseImg)
+        holder.courseImg
+
+        val drawable = ctx.getDrawable(R.drawable.rounding) as GradientDrawable
+        holder.courseImg.background = drawable
+        holder.courseImg.clipToOutline = true
+
+        Glide.with(ctx)
+            .load(dataList[position].course_img)
+            .into(holder.courseImg)
+
 
         holder.itemView.setOnClickListener {
             val intent = Intent(ctx,CourseDetailActivity::class.java)

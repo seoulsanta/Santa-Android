@@ -66,7 +66,7 @@ class CourseMapActivity : AppCompatActivity() {
         setContentView(R.layout.activity_course_map)
 
         mapView = MapView(this)
-        mapView.currentLocationTrackingMode = MapView.CurrentLocationTrackingMode.TrackingModeOff
+
 
         if (!checkLocationServicesStatus()) {
 
@@ -75,6 +75,10 @@ class CourseMapActivity : AppCompatActivity() {
 
             checkRunTimePermission()
         }
+
+
+
+       // mapView.currentLocationTrackingMode = MapView.CurrentLocationTrackingMode.TrackingModeOff
 
 
 
@@ -323,6 +327,7 @@ class CourseMapActivity : AppCompatActivity() {
 
 
             // 3.  위치 값을 가져올 수 있음
+            mapView.currentLocationTrackingMode = MapView.CurrentLocationTrackingMode.TrackingModeOff
 
 
         } else {  //2. 퍼미션 요청을 허용한 적이 없다면 퍼미션 요청이 필요합니다. 2가지 경우(3-1, 4-1)가 있습니다.
