@@ -1,9 +1,9 @@
 package com.yamgang.seoulsantaandroid.ui.login
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.kakao.auth.AuthType
 import com.kakao.auth.Session
 import com.yamgang.seoulsantaandroid.R
