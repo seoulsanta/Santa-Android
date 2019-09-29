@@ -11,10 +11,8 @@ import android.view.View
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.google.gson.JsonObject
-import com.google.gson.JsonParser
 import com.yamgang.seoulsantaandroid.R
-import com.yamgang.seoulsantaandroid.model.PUT.PutMypageEditResponse
+import com.yamgang.seoulsantaandroid.model.put.PutMypageEditResponse
 import com.yamgang.seoulsantaandroid.model.get.GetMypageResponse
 import com.yamgang.seoulsantaandroid.ui.MainActivity
 import com.yamgang.seoulsantaandroid.ui.login.LoginActivity
@@ -24,9 +22,7 @@ import kotlinx.android.synthetic.main.activity_my.*
 import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
-import okhttp3.ResponseBody
 import org.jetbrains.anko.startActivity
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

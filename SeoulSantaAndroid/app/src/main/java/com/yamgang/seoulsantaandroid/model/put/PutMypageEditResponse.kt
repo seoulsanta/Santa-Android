@@ -1,4 +1,4 @@
-package com.yamgang.seoulsantaandroid.model.PUT
+package com.yamgang.seoulsantaandroid.model.put
 
 data class PutMypageEditResponse (
     val message: String
