@@ -33,6 +33,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.provider.Settings
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
@@ -108,6 +109,7 @@ class CourseMapActivity : AppCompatActivity() {
 
         ((course_layout.parent) as ViewGroup).removeView(course_layout)
         ((btn_end.parent) as ViewGroup).removeView(btn_end)
+        ((btn_call_119.parent) as ViewGroup).removeView(btn_call_119)
 
         mapViewContainer.addView(mapView)
 
@@ -117,6 +119,8 @@ class CourseMapActivity : AppCompatActivity() {
         mapViewContainer.addView(btn_end)
 
         mapViewContainer.addView(btn_crr)
+
+        mapViewContainer.addView(btn_call_119)
 
         mapView.setCustomCurrentLocationMarkerTrackingImage(R.drawable.icon_point,MapPOIItem.ImageOffset(23,23))
         btn_crr.setOnClickListener {
@@ -132,6 +136,11 @@ class CourseMapActivity : AppCompatActivity() {
         btn_end.setOnClickListener {
             //등산 끝내기 눌렀을 때 -> current location이 저장된 데이터의 마지막인덱스의 위도 경도 의 일정범위내에 속하는지 확인
             endHiking(course_idx)
+        }
+        
+        // 신고 버튼 -> 119이 써진 다이얼로그 화면 띄우기
+        btn_call_119.setOnClickListener {
+            call119()
         }
 
     }
@@ -328,6 +337,12 @@ class CourseMapActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    fun call119(){
+        val tel = "tel:119"
+        val intent = Intent("android.intent.action.DIAL", Uri.parse(tel))
+        startActivity(intent)
     }
 
      //여기부터는 GPS 활성화를 위한 메소드들

@@ -60,6 +60,11 @@
             android:layout_width="92dp"
             android:layout_height="32dp"
             android:background="@drawable/icon_end"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/police" android:id="@+id/btn_call_119"
+            android:layout_marginEnd="3dp" android:layout_alignEnd="@+id/mapview"
+            android:layout_alignTop="@+id/mapview" android:layout_marginTop="3dp" android:padding="10dp"/>
     <RelativeLayout
             android:layout_below="@+id/logo_layout"
             android:id="@+id/mapview"
