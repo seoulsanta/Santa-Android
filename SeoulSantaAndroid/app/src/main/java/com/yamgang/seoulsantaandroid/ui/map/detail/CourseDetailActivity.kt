@@ -2,10 +2,15 @@ package com.yamgang.seoulsantaandroid.ui.map.detail
 
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Base64
 import android.util.Log
+import android.view.View
+import android.view.WindowManager
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.yamgang.seoulsantaandroid.R
@@ -25,7 +30,9 @@ class CourseDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_course_detail)
+        setContentView(R.layout.activity_course_detail) //투명상태바
+
+        setStatusBarTransparent()
 
         networkService = ApplicationController.networkService
 
@@ -55,6 +62,10 @@ class CourseDetailActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<GetCourse>, response: Response<GetCourse>) {
                 if(response.isSuccessful){
+                    val drawable = this@CourseDetailActivity.getDrawable(R.drawable.rounding) as GradientDrawable
+                    img_course.background = drawable
+                    img_course.clipToOutline = true
+
                     Glide.with(this@CourseDetailActivity)
                         .load(response.body()!!.data.mountain_img)
                         .into(img_mt_present)
@@ -90,5 +101,28 @@ class CourseDetailActivity : AppCompatActivity() {
         } catch (e: NoSuchAlgorithmException) {
 
         }
+    }
+
+    private fun setStatusBarTransparent() {
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.decorView.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
+                    View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+
+        setWindowFlag(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false)
+        if (Build.VERSION.SDK_INT >= 21) {
+            window.statusBarColor = Color.TRANSPARENT
+        }
+    }
+
+    private fun setWindowFlag(bits: Int, on: Boolean) {
+        val win = window
+        val winParams = win.attributes
+        if (on) {
+            winParams.flags = winParams.flags or bits
+            return
+        }
+        winParams.flags = winParams.flags and bits.inv()
+        win.attributes = winParams
     }
 }
