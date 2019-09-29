@@ -21,7 +21,6 @@ import com.yamgang.seoulsantaandroid.model.get.HomeThemeData
 import com.yamgang.seoulsantaandroid.ui.my.MyActivity
 import com.yamgang.seoulsantaandroid.util.ApplicationController
 import kotlinx.android.synthetic.main.fragment_home.*
-import org.jetbrains.anko.support.v4.find
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

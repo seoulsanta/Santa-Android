@@ -85,6 +85,10 @@ class SearchFragment : Fragment() {
             } else {
                 view_search_detail.isSelected = true
                 getSearchResponse(search_word)
+
+                // 키보드 숨기기
+                var imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(edt_search_mountain.windowToken, 0)
             }
         }
 
@@ -113,6 +117,10 @@ class SearchFragment : Fragment() {
             } else {
                 view_search_detail.isSelected = true
                 getSearchResponse(search_word)
+
+                // 키보드 숨기기
+                var imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(edt_search_mountain.windowToken, 0)
             }
             //refreshFragment()
         }
@@ -320,7 +328,7 @@ class SearchFragment : Fragment() {
     // 어떤 산인지 확인하기
     fun checkMountainLocation(idx: Int) {
         when (idx) {
-            1 -> controlMountainLocataion(5, 57)        //불암산
+            1 -> controlMountainLocataion(5, 63)        //불암산
             2 -> controlMountainLocataion(-5, 70)       //수락산
             3 -> controlMountainLocataion(-8, 113)      //도봉산
             4 -> controlMountainLocataion(20, 137)      //북한산
