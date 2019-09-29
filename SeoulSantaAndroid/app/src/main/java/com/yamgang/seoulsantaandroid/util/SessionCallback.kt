@@ -13,6 +13,7 @@ import com.kakao.usermgmt.response.model.UserProfile
 import com.kakao.util.exception.KakaoException
 import com.yamgang.seoulsantaandroid.model.post.PostKakaoLoginResponse
 import com.yamgang.seoulsantaandroid.ui.MainActivity
+import com.yamgang.seoulsantaandroid.ui.login.LoginActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -75,6 +76,8 @@ class SessionCallback (mContext: Context) : ISessionCallback {
 
                     val intent = Intent(mContext,MainActivity::class.java)
                     mContext.startActivity(intent)
+                    val loginAct = LoginActivity()
+                    loginAct.finish()
                 } else {
                     Log.e("*****KakaoLogin Response","실패")
                 }

@@ -1,23 +1,18 @@
 package com.yamgang.seoulsantaandroid.ui.my
 
-import android.app.Activity
-import android.content.Context
 import android.content.Intent
-import android.content.pm.ActivityInfo
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.ContextThemeWrapper
 import android.view.View
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.gun0912.tedpermission.PermissionListener
-import com.gun0912.tedpermission.TedPermission
+import com.google.gson.JsonObject
+import com.google.gson.JsonParser
 import com.yamgang.seoulsantaandroid.R
 import com.yamgang.seoulsantaandroid.model.PUT.PutMypageEditResponse
 import com.yamgang.seoulsantaandroid.model.get.GetMypageResponse
@@ -29,7 +24,9 @@ import kotlinx.android.synthetic.main.activity_my.*
 import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import org.jetbrains.anko.startActivity
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -46,7 +43,7 @@ class MyActivity : AppCompatActivity() {
         var instance: MyActivity = MyActivity()
     }
     lateinit var img: String
-    lateinit var input_profile_img: MultipartBody.Part
+    var input_profile_img: MultipartBody.Part? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,9 +65,9 @@ class MyActivity : AppCompatActivity() {
         }
 
         btn_act_my_profile_modify_complete.setOnClickListener {
-            val text = RequestBody.create(MediaType.parse("text/plain"), et_act_my_name_edit.text.toString())
-            Log.e("My",input_profile_img.toString()+"+"+text.toString())
-            putMypageEditResponse(input_profile_img,text)
+            val input_profile_name = RequestBody.create(MediaType.parse("text/plain"), et_act_my_name_edit.text.toString())
+            tv_act_my_name.text = et_act_my_name_edit.text.toString()
+            putMypageEditResponse(input_profile_name, input_profile_img)
             btn_act_my_edit_profile.visibility = View.GONE
             tv_act_my_name.visibility = View.VISIBLE
             et_act_my_name_edit.visibility = View.GONE
@@ -114,12 +111,11 @@ class MyActivity : AppCompatActivity() {
             override fun onResponse(call: Call<GetMypageResponse>, response: Response<GetMypageResponse>) {
                 if(response.isSuccessful) {
                     try{
-                        var options: RequestOptions = RequestOptions().circleCrop()
+                        var option: RequestOptions = RequestOptions().circleCrop()
                         Glide.with(this@MyActivity)
                             .load(response.body()!!.data.img)
-                            .apply(options)
+                            .apply(option)
                             .into(iv_act_my_profile)
-                        instance.img = response.body()!!.data.img
                         tv_act_my_name.text = response.body()!!.data.name
                         tv_act_my_version.text = "최신 "+"1.0.0"+" 사용중"
 
@@ -163,20 +159,20 @@ class MyActivity : AppCompatActivity() {
 
     }
 
-    private fun putMypageEditResponse(img: MultipartBody.Part?, name: RequestBody) {
-        val putMypageEditResponse = networkService.putMypageEditResponse("multipart/form-data", User.authorization,name, img)
-        putMypageEditResponse.enqueue(object :Callback<PutMypageEditResponse> {
+    private fun putMypageEditResponse(name: RequestBody, img: MultipartBody.Part?) {
+        val putMypageEditResponse = networkService.putMypageEditResponse(User.authorization, name, img)
+        Log.e("MyActivity-editfail", "in")
+        putMypageEditResponse.enqueue(object : Callback<PutMypageEditResponse> {
             override fun onFailure(call: Call<PutMypageEditResponse>, t: Throwable) {
                 Log.e("MyActivity-editfail", t.toString())
             }
 
             override fun onResponse(call: Call<PutMypageEditResponse>, response: Response<PutMypageEditResponse>) {
                 if(response.isSuccessful) {
-                    try {
+                    try{
                         Log.e("MyActivity-editResponse", "success")
-                    } catch (e: Exception) {
+                    }catch (e: Exception) {
                         Log.e("MyActivity-editResponse", "fail")
-
                     }
                 }
             }

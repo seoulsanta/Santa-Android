@@ -40,13 +40,12 @@
                 android:layout_alignRight="@id/iv_act_my_profile"
                 android:visibility="gone"/>
     </RelativeLayout>
-
     <TextView
             android:id="@+id/tv_act_my_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="으밍으밍"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="13.6dp"
             android:textSize="16dp"
             android:textColor="@color/badgeTitleText"
             android:fontFamily="@font/kopubworlddotumlight"
@@ -55,9 +54,12 @@
             android:id="@+id/et_act_my_name_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:includeFontPadding="false"
             android:hint="바꿀 이름을 입력하세요."
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="6dp"
             android:textSize="16dp"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
             android:textAlignment="center"
             android:textColor="@color/badgeTitleText"
             android:fontFamily="@font/kopubworlddotumlight"
