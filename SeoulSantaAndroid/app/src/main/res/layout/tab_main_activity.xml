@@ -10,7 +10,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/btn_tab_main_act_home"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp">
         <TextView
                 android:id="@+id/tv_tl_main_home"
                 android:text="HOME"
@@ -22,9 +23,10 @@
                 android:letterSpacing="-0.08"
                 android:lineSpacingExtra="5sp"
                 android:gravity="center_horizontal"
-                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+                android:includeFontPadding="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -32,7 +34,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/btn_tab_main_act_map"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp">
         <TextView
                 android:text="MAP"
                 android:layout_width="match_parent"
@@ -41,11 +44,12 @@
                 android:textColor="@drawable/selector_main_tab_tv"
                 android:fontFamily="@font/notosansregular"
                 android:letterSpacing="-0.08"
+                android:includeFontPadding="false"
                 android:lineSpacingExtra="5sp"
                 android:gravity="center_horizontal"
-                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -53,20 +57,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/btn_tab_main_act_search"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp">
         <TextView
                 android:text="SEARCH"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:letterSpacing="-0.08"
+                android:includeFontPadding="false"
                 android:textColor="@drawable/selector_main_tab_tv"
                 android:fontFamily="@font/notosansregular"
                 android:lineSpacingExtra="5sp"
                 android:gravity="center_horizontal"
-                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -74,20 +80,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/btn_tab_main_act_badge"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp">
         <TextView
                 android:text="BADGE"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14sp"
                 android:letterSpacing="-0.08"
+                android:includeFontPadding="false"
                 android:lineSpacingExtra="5sp"
                 android:textColor="@drawable/selector_main_tab_tv"
                 android:fontFamily="@font/notosansregular"
                 android:gravity="center_horizontal"
-                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="8dp"
-                app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
