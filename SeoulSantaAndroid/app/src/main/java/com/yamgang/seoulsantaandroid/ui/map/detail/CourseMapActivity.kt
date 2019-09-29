@@ -85,6 +85,7 @@ class CourseMapActivity : AppCompatActivity() {
 
         val course_idx = intent.getIntExtra("course_idx",-1)
         val course_name = intent.getStringExtra("name")
+        val badge_flag = intent.getIntExtra("badge",-1) //뱃지에서 오는거면 1, 아니면 0
 
 
 
@@ -114,13 +115,21 @@ class CourseMapActivity : AppCompatActivity() {
         mapViewContainer.addView(mapView)
 
         mapViewContainer.addView(course_layout)
-        map_course_name.text = "$course_name 도전중"
 
-        mapViewContainer.addView(btn_end)
+        if(badge_flag==1){
+            map_course_name.text = "$course_name 완주!"
 
-        mapViewContainer.addView(btn_crr)
+        }else{
+            map_course_name.text = "$course_name 도전중"
 
-        mapViewContainer.addView(btn_call_119)
+            mapViewContainer.addView(btn_end)
+
+            mapViewContainer.addView(btn_crr)
+
+            mapViewContainer.addView(btn_call_119)
+        }
+
+
 
         mapView.setCustomCurrentLocationMarkerTrackingImage(R.drawable.icon_point,MapPOIItem.ImageOffset(23,23))
         btn_crr.setOnClickListener {
@@ -209,7 +218,7 @@ class CourseMapActivity : AppCompatActivity() {
                 if(response.isSuccessful){
                     val polyline = MapPolyline()
                     polyline.tag = 1000
-                    polyline.lineColor = Color.parseColor("#58be00")
+                    polyline.lineColor = Color.parseColor("#E97424")
                     dataList = response.body()!!.data
 
                     for (i in 0 until dataList.size){

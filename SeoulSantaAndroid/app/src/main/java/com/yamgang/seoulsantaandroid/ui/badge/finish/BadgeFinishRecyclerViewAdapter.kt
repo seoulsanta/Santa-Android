@@ -28,6 +28,7 @@ class BadgeFinishRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<B
             val intent = Intent(ctx, CourseMapActivity::class.java)
             intent.putExtra("course_idx",dataList[position].course_idx)
             intent.putExtra("name",dataList[position].course_name)
+            intent.putExtra("badge",1)
             ctx.startActivity(intent)
         }
     }
