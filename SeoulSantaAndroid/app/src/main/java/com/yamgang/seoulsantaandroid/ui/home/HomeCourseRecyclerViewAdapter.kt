@@ -1,6 +1,7 @@
 package com.yamgang.seoulsantaandroid.ui.home
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.yamgang.seoulsantaandroid.R
 import com.yamgang.seoulsantaandroid.model.get.HomeCourseData
+import com.yamgang.seoulsantaandroid.ui.map.detail.CourseDetailActivity
 
 class HomeCourseRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<HomeCourseData>): RecyclerView.Adapter<HomeCourseRecyclerViewAdapter.Holder>() {
 
@@ -27,7 +29,9 @@ class HomeCourseRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<Ho
             .load(dataList[position].mountain_img)
             .into(holder.img)
         holder.full.setOnClickListener {
-            //코스띄우기
+            val intent = Intent(ctx, CourseDetailActivity::class.java)
+            intent.putExtra("course_idx",dataList[position].course_idx)
+            ctx.startActivity(intent)
         }
     }
 

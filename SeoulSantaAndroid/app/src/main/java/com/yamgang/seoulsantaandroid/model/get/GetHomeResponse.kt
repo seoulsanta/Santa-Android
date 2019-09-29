@@ -8,6 +8,9 @@ data class GetHomeResponse (
 data class HomeData (
     var weather: String,
     var text: String,
+    var dust: String,
+    var dust_num: String,
+    var dust_text: String,
     var theme: ArrayList<HomeThemeData>
 )
 

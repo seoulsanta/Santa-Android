@@ -9,4 +9,8 @@
     <color name="badgeTitleText">#575757</color>
     <drawable name="colorFocused">#58be00</drawable>
     <drawable name="colorUnfocused">#575757</drawable>
+    <color name="homeDust1">#40038BD3</color>
+    <color name="homeDust2">#403ABE00</color>
+    <color name="homeDust3">#40E25F00</color>
+    <color name="homeDust4">#40BE0000</color>
 </resources>
