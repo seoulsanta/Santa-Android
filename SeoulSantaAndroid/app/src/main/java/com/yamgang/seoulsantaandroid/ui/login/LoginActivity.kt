@@ -3,6 +3,7 @@ package com.yamgang.seoulsantaandroid.ui.login
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.kakao.auth.AuthType
 import com.kakao.auth.Session
 import com.yamgang.seoulsantaandroid.R
@@ -16,6 +17,10 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         setOnClickListener()
+
+        btn_login_naver.setOnClickListener {
+            Toast.makeText(this, "서비스 준비 중입니다.", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun setOnClickListener() {

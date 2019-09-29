@@ -34,8 +34,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
                                                            android:layout_height="match_parent"
-                                                           android:id="@+id/cl_search"
-        >>
+                                                           android:background="@android:color/white"
+                                                           android:id="@+id/cl_search">
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -68,16 +68,17 @@
                     android:textColor="#575757"
                     android:textSize="15sp"
                     android:fontFamily="@font/kopubworlddotummedium"
-                    app:lineHeight="23sp" app:layout_constraintTop_toBottomOf="@+id/view"
-                    app:layout_constraintStart_toStartOf="@+id/view" android:layout_marginTop="32dp"/>
+                    app:lineHeight="23sp" app:layout_constraintTop_toBottomOf="@+id/view_search"
+                    app:layout_constraintStart_toStartOf="@+id/view_search" android:layout_marginTop="32dp"/>
             <View
                     android:layout_width="0dp"
                     android:layout_height="1dp"
-                    android:id="@+id/view"
+                    android:id="@+id/view_search"
                     android:textColor="@color/colorMain"
                     app:layout_constraintStart_toStartOf="@+id/edt_search_mountain"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
-                    app:layout_constraintTop_toBottomOf="@+id/edt_search_mountain"/>
+                    app:layout_constraintTop_toBottomOf="@+id/edt_search_mountain"
+                    android:background="@drawable/selector_search_view"/>
             <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" app:srcCompat="@drawable/santa_search"
@@ -85,7 +86,7 @@
                     android:padding="10dp" android:paddingRight="20dp"
                     android:paddingTop="20dp" android:layout_marginBottom="-1dp"
                     app:layout_constraintBottom_toBottomOf="@+id/edt_search_mountain" android:layout_marginEnd="-6dp"
-                    app:layout_constraintEnd_toEndOf="@+id/view"/>
+                    app:layout_constraintEnd_toEndOf="@+id/view_search"/>
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -175,21 +176,23 @@
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintVertical_bias="1.0"
+                android:background="@android:color/white"
                 android:id="@+id/cl_search_detail">>
             <View
                     android:layout_width="0dp"
                     android:layout_height="1dp"
-                    android:id="@+id/view2"
+                    android:id="@+id/view_search_detail"
                     android:textColor="@color/colorMain"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
-                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="49dp"/>
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="49dp"
+                    android:background="@drawable/selector_search_view"/>
             <ImageView
                     android:src="@drawable/icon_x"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/btn_search_x"
                     android:padding="15dp"
-                    app:layout_constraintBottom_toTopOf="@+id/view2" app:layout_constraintEnd_toEndOf="@+id/view2"
+                    app:layout_constraintBottom_toTopOf="@+id/view_search_detail" app:layout_constraintEnd_toEndOf="@+id/view_search_detail"
                     android:layout_marginEnd="-8dp" android:layout_marginBottom="-8dp"/>
             <ImageView
                     android:src="@drawable/santa_search"
@@ -197,7 +200,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/btn_search_detail"
                     android:padding="15dp" android:layout_marginEnd="-8dp"
-                    app:layout_constraintEnd_toEndOf="@+id/view2"
+                    app:layout_constraintEnd_toEndOf="@+id/view_search_detail"
                     app:layout_constraintBottom_toTopOf="@+id/search_result_container"
                     android:layout_marginBottom="-8dp" android:visibility="gone"/>
             <EditText
@@ -211,18 +214,20 @@
                     android:privateImeOptions="defaultInputmode=korean"
                     android:paddingRight="150dp" android:paddingTop="10dp"
                     android:paddingLeft="10dp" android:paddingBottom="10dp"
-                    app:layout_constraintBottom_toTopOf="@+id/view2"
+                    app:layout_constraintBottom_toTopOf="@+id/view_search_detail"
                     android:layout_marginBottom="-8dp" android:layout_marginStart="-10dp"
-                    app:layout_constraintStart_toStartOf="@+id/view2" android:textColor="#4e4e4e"/>
+                    app:layout_constraintStart_toStartOf="@+id/view_search_detail" android:textColor="#4e4e4e"/>
             <FrameLayout android:layout_width="0dp"
                          android:layout_height="wrap_content"
                          android:id="@+id/search_result_container"
-                         app:layout_constraintTop_toBottomOf="@+id/view2"
+                         app:layout_constraintTop_toBottomOf="@+id/view_search_detail"
                          app:layout_constraintStart_toStartOf="parent"
                          app:layout_constraintEnd_toEndOf="parent" android:visibility="visible">>
                 <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/cl_search_result">
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:id="@+id/cl_search_result">
                     <ImageView
                             android:src="@drawable/mountain"
                             android:layout_width="wrap_content"
@@ -326,7 +331,9 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" android:id="@+id/cl_search_result_no_item">
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        android:id="@+id/cl_search_result_no_item">
                     <ImageView
                             android:src="@drawable/mt_no_item_icon"
                             android:layout_width="wrap_content"

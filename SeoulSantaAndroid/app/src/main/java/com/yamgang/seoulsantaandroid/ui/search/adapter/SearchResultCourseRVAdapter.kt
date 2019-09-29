@@ -1,6 +1,7 @@
 package com.yamgang.seoulsantaandroid.ui.search.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +14,7 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.yamgang.seoulsantaandroid.R
 import com.yamgang.seoulsantaandroid.model.get.SearchMountainCourseData
+import com.yamgang.seoulsantaandroid.ui.map.detail.CourseDetailActivity
 
 class SearchResultCourseRVAdapter(private val ctx: Context, var dataList: ArrayList<SearchMountainCourseData>) :
     RecyclerView.Adapter<SearchResultCourseRVAdapter.Holder>() {
@@ -33,6 +35,13 @@ class SearchResultCourseRVAdapter(private val ctx: Context, var dataList: ArrayL
                 .into(holder.ivCourseImage)
 
             holder.tvCourseName.text = item.theme_name
+
+            // MapDetail으로 이동하기
+            holder.itemView.setOnClickListener {
+                val intent = Intent(ctx, CourseDetailActivity::class.java)
+                intent.putExtra("course_idx",item.course_idx)
+                ctx.startActivity(intent)
+            }
         }
     }
 

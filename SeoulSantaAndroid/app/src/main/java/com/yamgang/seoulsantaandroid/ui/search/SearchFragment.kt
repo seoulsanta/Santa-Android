@@ -1,14 +1,17 @@
 package com.yamgang.seoulsantaandroid.ui.search
 
 import android.content.Context
-import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.transition.TransitionManager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
@@ -27,6 +30,7 @@ import com.yamgang.seoulsantaandroid.ui.search.adapter.SearchResultCourseRVAdapt
 import com.yamgang.seoulsantaandroid.util.ApplicationController
 import com.yamgang.seoulsantaandroid.util.NetworkService
 import kotlinx.android.synthetic.main.fragment_search.*
+import org.jetbrains.anko.backgroundColor
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -68,12 +72,18 @@ class SearchFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         getMountainRecommend()
 
+        view_search.isSelected = true
+        view_search_detail.isSelected = true
+
 //        setVisible(search_container)
 //        setGone(search_detail_container)
 
         btn_search_icon.setOnClickListener {
             var search_word: String = edt_search_mountain.text.toString()
-            if (search_word != "") {
+            if (search_word.length < 2) {
+                Toast.makeText(this@SearchFragment.context!!, "두 글자 이상 입력해주세요 :)", Toast.LENGTH_SHORT).show()
+            } else {
+                view_search_detail.isSelected = true
                 getSearchResponse(search_word)
             }
         }
@@ -95,12 +105,23 @@ class SearchFragment : Fragment() {
 
         btn_search_detail.setOnClickListener {
             var search_word: String = edt_search_detail_word.text.toString()
-            getSearchResponse(search_word)
-            refreshFragment()
+            setGone(btn_search_detail)
+            setVisible(btn_search_x)
+
+            if (search_word.length < 2) {
+                Toast.makeText(this@SearchFragment.context!!, "두 글자 이상 입력해주세요 :)", Toast.LENGTH_SHORT).show()
+            } else {
+                view_search_detail.isSelected = true
+                getSearchResponse(search_word)
+            }
+            //refreshFragment()
         }
 
         btn_search_x.setOnClickListener {
             edt_search_detail_word.setText("")
+            view_search_detail.isSelected = false
+            setGone(btn_search_x)
+            setVisible(btn_search_detail)
             try {
                 // 키보드 포커스 주기
                 edt_search_detail_word.requestFocus()
@@ -108,16 +129,49 @@ class SearchFragment : Fragment() {
                 imm.showSoftInput(edt_search_mountain, 0)
             } catch (e: java.lang.Exception) {
             }
-            setGone(btn_search_x)
-            setVisible(btn_search_detail)
-        }
 
+        }
 
         edt_search_detail_word.setOnClickListener {
             setGone(btn_search_x)
             setVisible(btn_search_detail)
         }
 
+        edt_search_detail_word.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+            }
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                if (p0.toString().length < 2) {
+                    view_search_detail.isSelected = false
+                    view_search.backgroundColor = Color.GRAY
+                } else {
+                    view_search_detail.isSelected = true
+                    view_search.setBackgroundColor(getResources().getColor(R.color.colorMain))
+                }
+            }
+        })
+
+
+        edt_search_mountain.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+            }
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                if (p0.toString().length < 2) {
+                    view_search.isSelected = false
+                    view_search.backgroundColor = Color.GRAY
+                } else {
+                    view_search.isSelected = true
+                    view_search.setBackgroundColor(getResources().getColor(R.color.colorMain))
+                }
+            }
+        })
     }
 
     // 산 검색 서버 통신
@@ -206,7 +260,7 @@ class SearchFragment : Fragment() {
 
     // 검색 결과가 있을 때
     fun getResults() {
-        if (search_detail_container.isGone){
+        if (search_detail_container.isGone) {
             setGone(search_container)
             setVisible(search_detail_container)
         }
@@ -218,7 +272,7 @@ class SearchFragment : Fragment() {
 
     // 검색 결과가 없을 때
     fun getNoResult() {
-        if (search_detail_container.isGone){
+        if (search_detail_container.isGone) {
             setGone(search_container)
             setVisible(search_detail_container)
         }

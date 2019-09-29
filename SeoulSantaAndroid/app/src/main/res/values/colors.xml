@@ -7,4 +7,6 @@
     <color name="textWhite">#ffffff</color>
     <color name="colorMain">#58be00</color>
     <color name="badgeTitleText">#575757</color>
+    <drawable name="colorFocused">#58be00</drawable>
+    <drawable name="colorUnfocused">#575757</drawable>
 </resources>
