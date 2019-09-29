@@ -1,14 +1,12 @@
 package com.yamgang.seoulsantaandroid.util
 
 import com.yamgang.seoulsantaandroid.model.BadgeRegister
+import com.yamgang.seoulsantaandroid.model.put.PutMypageEditResponse
 import com.yamgang.seoulsantaandroid.model.get.*
-import com.yamgang.seoulsantaandroid.model.get.GetBadgeResponse
-import com.yamgang.seoulsantaandroid.model.get.GetHomeResponse
-import com.yamgang.seoulsantaandroid.model.get.GetCourse
-import com.yamgang.seoulsantaandroid.model.get.GetCourseDetail
-import com.yamgang.seoulsantaandroid.model.get.GetMountain
 import com.yamgang.seoulsantaandroid.model.post.PostBadgeRegister
 import com.yamgang.seoulsantaandroid.model.post.PostKakaoLoginResponse
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -70,4 +68,20 @@ interface NetworkService {
     fun getMountainRecommend(
         @Header("Content-Type") contentType: String = "application/json"
     ):Call<GetMountainRecommend>
+
+    //마이페이지 조회
+    @GET("/user/mypage")
+    fun getMypageResponse(
+        @Header("Content-Type") content_type: String,
+        @Header("Authorization") token: String?
+    ):Call<GetMypageResponse>
+
+    //마이페이지 수정
+    @Multipart
+    @PUT("/user/mypage")
+    fun putMypageEditResponse(
+        @Header("Authorization") token: String?,
+        @Part("name") name: RequestBody,
+        @Part img: MultipartBody.Part?
+    ):Call<PutMypageEditResponse>
 }
