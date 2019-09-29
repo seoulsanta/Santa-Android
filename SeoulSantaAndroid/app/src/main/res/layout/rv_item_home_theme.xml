@@ -11,13 +11,17 @@
             android:layout_height="wrap_content"
             android:text="등산코스 추천리스트"
             android:textColor="@color/textBlack"
+            android:paddingStart="26dp"
             android:textSize="14dp"
+            android:layout_marginBottom="5dp"
             android:fontFamily="@font/kopubworlddotumlight"/>
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_rv_item_home_course_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingStart="26dp"
             android:orientation="horizontal"
+            android:clipToPadding="false"
             android:overScrollMode="never">
     </androidx.recyclerview.widget.RecyclerView>
 

@@ -7,6 +7,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.transition.TransitionManager
 import android.util.Log
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -78,6 +79,8 @@ class SearchFragment : Fragment() {
 //        setVisible(search_container)
 //        setGone(search_detail_container)
 
+        setOnKeyListener()
+
         btn_search_icon.setOnClickListener {
             var search_word: String = edt_search_mountain.text.toString()
             if (search_word.length < 2) {
@@ -85,6 +88,10 @@ class SearchFragment : Fragment() {
             } else {
                 view_search_detail.isSelected = true
                 getSearchResponse(search_word)
+
+                // 키보드 숨기기
+                var imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(edt_search_mountain.windowToken, 0)
             }
         }
 
@@ -113,6 +120,10 @@ class SearchFragment : Fragment() {
             } else {
                 view_search_detail.isSelected = true
                 getSearchResponse(search_word)
+
+                // 키보드 숨기기
+                var imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(edt_search_mountain.windowToken, 0)
             }
             //refreshFragment()
         }
@@ -222,6 +233,46 @@ class SearchFragment : Fragment() {
         })
     }
 
+    fun setOnKeyListener() {
+        edt_search_mountain.setOnKeyListener { view, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_ENTER && (event.action == KeyEvent.ACTION_DOWN)) {
+                var search_word: String = edt_search_mountain.text.toString()
+                if (search_word.length < 2) {
+                    Toast.makeText(this@SearchFragment.context!!, "두 글자 이상 입력해주세요 :)", Toast.LENGTH_SHORT).show()
+                } else {
+                    view_search_detail.isSelected = true
+                    getSearchResponse(search_word)
+
+                    // 키보드 숨기기
+                    var imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    imm.hideSoftInputFromWindow(edt_search_mountain.windowToken, 0)
+                }
+                return@setOnKeyListener true
+            }
+            return@setOnKeyListener false
+        }
+        edt_search_detail_word.setOnKeyListener { view, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_ENTER && (event.action == KeyEvent.ACTION_DOWN)) {
+                var search_word: String = edt_search_detail_word.text.toString()
+                setGone(btn_search_detail)
+                setVisible(btn_search_x)
+
+                if (search_word.length < 2) {
+                    Toast.makeText(this@SearchFragment.context!!, "두 글자 이상 입력해주세요 :)", Toast.LENGTH_SHORT).show()
+                } else {
+                    view_search_detail.isSelected = true
+                    getSearchResponse(search_word)
+
+                    // 키보드 숨기기
+                    var imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    imm.hideSoftInputFromWindow(edt_search_mountain.windowToken, 0)
+                }
+                return@setOnKeyListener true
+            }
+            return@setOnKeyListener false
+        }
+    }
+
     // 추천 검색어 서버 통신
     fun getMountainRecommend() {
         val getMountainRecommend = networkService.getMountainRecommend("application/json")
@@ -320,7 +371,7 @@ class SearchFragment : Fragment() {
     // 어떤 산인지 확인하기
     fun checkMountainLocation(idx: Int) {
         when (idx) {
-            1 -> controlMountainLocataion(5, 57)        //불암산
+            1 -> controlMountainLocataion(5, 63)        //불암산
             2 -> controlMountainLocataion(-5, 70)       //수락산
             3 -> controlMountainLocataion(-8, 113)      //도봉산
             4 -> controlMountainLocataion(20, 137)      //북한산
