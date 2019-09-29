@@ -23,8 +23,16 @@ class BadgeCurrentRecyclerViewAdapter(val ctx: Context, var dataList: ArrayList<
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
         if(position < dataList.size){
+            var img : Int = -1
+            if(dataList[position].degree == "어려움"){
+                img = R.drawable.badge_get_hard
+            } else if(dataList[position].degree == "보통") {
+                img = R.drawable.badge_get_normal
+            } else if(dataList[position].degree == "쉬움") {
+                img = R.drawable.badge_get_easy
+            }
             Glide.with(ctx)
-                .load(R.drawable.badge_get)
+                .load(img)
                 .into(holder.img)
             //뱃지 클릭할 시,
             val date_split = dataList[position].date

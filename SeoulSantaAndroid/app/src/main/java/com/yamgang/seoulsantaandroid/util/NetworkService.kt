@@ -1,10 +1,10 @@
 package com.yamgang.seoulsantaandroid.util
 
 import com.yamgang.seoulsantaandroid.model.BadgeRegister
-import com.yamgang.seoulsantaandroid.model.put.PutMypageEditResponse
 import com.yamgang.seoulsantaandroid.model.get.*
 import com.yamgang.seoulsantaandroid.model.post.PostBadgeRegister
 import com.yamgang.seoulsantaandroid.model.post.PostKakaoLoginResponse
+import com.yamgang.seoulsantaandroid.model.put.PutMypageEditResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call

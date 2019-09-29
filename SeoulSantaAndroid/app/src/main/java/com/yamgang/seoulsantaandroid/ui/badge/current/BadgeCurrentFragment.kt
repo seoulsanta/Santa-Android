@@ -38,7 +38,7 @@ class BadgeCurrentFragment : Fragment() {
     }
 
     private fun setRecyclerView() {
-        badgeCurrentRecyclerViewAdapter = BadgeCurrentRecyclerViewAdapter(activity!!, data!!.badge, data!!.total)
+        badgeCurrentRecyclerViewAdapter = BadgeCurrentRecyclerViewAdapter(activity!!, data.badge, data.total)
         rv_frag_badge_current_list.adapter = badgeCurrentRecyclerViewAdapter
         rv_frag_badge_current_list.layoutManager = GridLayoutManager(activity,3)
     }
