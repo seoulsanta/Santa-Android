@@ -41,7 +41,7 @@
         </activity>
         <activity android:name=".ui.map.detail.CourseDetailActivity">
         </activity>
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.MainActivity" android:windowSoftInputMode="adjustNothing">
 
         </activity>
     </application>
