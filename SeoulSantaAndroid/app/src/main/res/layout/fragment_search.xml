@@ -5,23 +5,24 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#fff"
         android:tag="fragment_search"
         tools:context=".ui.search.SearchFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="64dp"
+            android:layout_height="81dp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:background="@android:color/white"
-            android:elevation="10dp" android:id="@+id/cl_search_top_bar">
+            android:background="@drawable/shadow_top"
+            android:id="@+id/cl_search_top_bar">
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:srcCompat="@drawable/santa_logo"
-                android:id="@+id/imageView2" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/imageView2" android:layout_marginTop="7dp" app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="24dp" app:layout_constraintBottom_toBottomOf="parent"
                 android:background="@android:color/transparent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -46,7 +47,7 @@
                     android:fontFamily="@font/kopubworlddotumlight"
                     android:id="@+id/textView2"
                     android:background="@android:color/transparent"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="4dp"
                     app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="16dp"
                     app:layout_constraintStart_toStartOf="parent"/>
             <EditText
@@ -229,6 +230,14 @@
                         android:background="@android:color/white"
                         android:id="@+id/cl_search_result">
                     <ImageView
+                            android:src="@drawable/search_map_bg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/iv_search_result_map"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginTop="61dp" app:layout_constraintTop_toTopOf="parent"/>
+                    <ImageView
                             android:src="@drawable/mountain"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -300,14 +309,6 @@
                             android:background="@android:color/white"
                             android:layout_marginTop="6dp"
                             app:layout_constraintTop_toTopOf="@+id/iv_search_result_mt_word_balloon"/>
-                    <ImageView
-                            android:src="@drawable/search_map_bg"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/iv_search_result_map"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:layout_marginTop="61dp" app:layout_constraintTop_toTopOf="parent"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </FrameLayout>
@@ -340,7 +341,7 @@
                             android:layout_height="wrap_content" android:id="@+id/imageView3"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginTop="189dp"
+                            android:layout_marginTop="159dp"
                             app:layout_constraintTop_toTopOf="parent"/>
 
                     <TextView
