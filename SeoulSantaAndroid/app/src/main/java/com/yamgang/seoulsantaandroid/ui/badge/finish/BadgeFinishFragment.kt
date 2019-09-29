@@ -26,14 +26,14 @@ class BadgeFinishFragment : Fragment() {
     }
 
     private fun setRecyclerView(view:View) {
-        if(data!!.badge.size == 0) {
+        if(data.badge.size == 0) {
             view.rl_frag_badge_finish_default_page.visibility = View.VISIBLE
             view.rl_frag_badge_finish_exist_page.visibility = View.GONE
         } else{
             view.rl_frag_badge_finish_default_page.visibility = View.GONE
             view.rl_frag_badge_finish_exist_page.visibility = View.VISIBLE
         }
-        badgeFinishRecyclerViewAdapter = BadgeFinishRecyclerViewAdapter(activity!!, data!!.badge)
+        badgeFinishRecyclerViewAdapter = BadgeFinishRecyclerViewAdapter(activity!!, data.badge)
         view.rv_frag_badge_finish_list.adapter = badgeFinishRecyclerViewAdapter
         view.rv_frag_badge_finish_list.layoutManager = LinearLayoutManager(activity)
     }

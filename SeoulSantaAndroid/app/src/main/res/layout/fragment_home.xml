@@ -35,50 +35,115 @@
                 android:src="@drawable/weather_01"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="14dp"/>
-        <LinearLayout
+        <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="3dp">
-            <TextView
+            <LinearLayout
+                    android:id="@+id/ll_frag_home_first_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="오늘 서울시의 날씨는 "
-                    android:textSize="15dp"
-                    android:textColor="@color/textBlack"
-                    android:fontFamily="@font/kopubworlddotumlight"
-                    android:includeFontPadding="false"/>
-            <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                <View
-                        android:layout_width="31dp"
-                        android:layout_height="7dp"
-                        android:layout_marginTop="9dp"
-                        android:background="#423abe00">
-                </View>
-                <TextView
-                        android:id="@+id/tv_frag_home_weather"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true">
+                <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="맑음입니다."
+                        android:orientation="horizontal">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="오늘 서울시의 날씨는 "
+                            android:textSize="15dp"
+                            android:textColor="@color/textBlack"
+                            android:fontFamily="@font/kopubworlddotumlight"
+                            android:includeFontPadding="false"/>
+                    <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <View
+                                android:layout_width="31dp"
+                                android:layout_height="7dp"
+                                android:layout_marginTop="12dp"
+                                android:background="#423abe00">
+                        </View>
+                        <TextView
+                                android:id="@+id/tv_frag_home_weather"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="맑음입니다."
+                                android:textSize="15dp"
+                                android:textColor="@color/textBlack"
+                                android:fontFamily="@font/kopubworlddotumlight"
+                                android:includeFontPadding="false"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <TextView
+                        android:id="@+id/tv_frag_home_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="즐거운 등산하세요!"
                         android:textSize="15dp"
+                        android:layout_gravity="center_horizontal"
                         android:textColor="@color/textBlack"
                         android:fontFamily="@font/kopubworlddotumlight"
                         android:includeFontPadding="false"/>
-            </RelativeLayout>
-        </LinearLayout>
-        <TextView
-                android:id="@+id/tv_frag_home_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="즐거운 등산하세요!"
-                android:textSize="15dp"
-                android:layout_gravity="center_horizontal"
-                android:textColor="@color/textBlack"
-                android:fontFamily="@font/kopubworlddotumlight"
-                android:includeFontPadding="false"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/ll_frag_home_second_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerHorizontal="true">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="오늘 서울시의 미세먼지는 "
+                        android:textSize="15dp"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/textBlack"
+                        android:fontFamily="@font/kopubworlddotumlight"
+                        android:includeFontPadding="false"/>
+                <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-2dp"
+                        android:layout_gravity="center_horizontal">
+                    <View
+                            android:id="@+id/view_frag_home_dust_color"
+                            android:layout_width="31dp"
+                            android:layout_height="7dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_alignParentStart="true">
+                    </View>
+                    <TextView
+                            android:id="@+id/tv_frag_home_dust"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="나쁨입니다. (11㎍/㎥)"
+                            android:textSize="15dp"
+                            android:textColor="@color/textBlack"
+                            android:fontFamily="@font/kopubworlddotumlight"
+                            android:includeFontPadding="false"/>
+                </RelativeLayout>
+                <TextView
+                        android:id="@+id/tv_frag_home_dust_ment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="실외 활동을 자제하세요 :)"
+                        android:textSize="15dp"
+                        android:layout_marginTop="-2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/textBlack"
+                        android:fontFamily="@font/kopubworlddotumlight"
+                        android:includeFontPadding="false"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_frag_home_theme_list"
                 android:layout_width="match_parent"

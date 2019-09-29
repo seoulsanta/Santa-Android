@@ -15,5 +15,6 @@ data class BadgeListData(
     val badge_idx: Int,
     val course_idx: Int,
     val course_name: String,
-    val date: String
+    val date: String,
+    var degree: String
 )
