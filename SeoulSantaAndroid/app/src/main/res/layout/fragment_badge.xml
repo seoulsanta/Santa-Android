@@ -8,18 +8,21 @@
         android:background="@color/colorMain"
         android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:background="#ffffff"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="0dp">
+            android:layout_height="81dp"
+            android:background="@drawable/shadow_top">
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/logo_main"
-                android:layout_gravity="center"/>
-    </androidx.cardview.widget.CardView>
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
             android:id="@+id/indicator_frag_badge"

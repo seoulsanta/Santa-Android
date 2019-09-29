@@ -39,6 +39,7 @@ class CourseDetailActivity : AppCompatActivity() {
             val intent = Intent(applicationContext,CourseMapActivity::class.java)
             intent.putExtra("course_idx",course_idx)
             intent.putExtra("name",name)
+            intent.putExtra("badge",0)
             startActivity(intent)
         }
 
@@ -54,12 +55,12 @@ class CourseDetailActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<GetCourse>, response: Response<GetCourse>) {
                 if(response.isSuccessful){
-//                    Glide.with(this@CourseDetailActivity)
-//                        .load(response.body()!!.data.mountain_img)
-//                        .into(img_mt_present)
-//                    Glide.with(this@CourseDetailActivity)
-//                        .load(response.body()!!.data.course_img)
-//                        .into(img_course)
+                    Glide.with(this@CourseDetailActivity)
+                        .load(response.body()!!.data.mountain_img)
+                        .into(img_mt_present)
+                    Glide.with(this@CourseDetailActivity)
+                        .load(response.body()!!.data.course_img)
+                        .into(img_course)
                     mt_name.text = response.body()!!.data.mountain_name
                     mt_content.text = response.body()!!.data.mountain_content
                     name = response.body()!!.data.course_name
