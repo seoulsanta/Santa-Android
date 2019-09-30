@@ -2,13 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="100dp"
+              android:layout_height="wrap_content"
                 android:background="#ffffff">
     <RelativeLayout
+            android:layout_marginTop="21dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="31dp"
             android:layout_width="match_parent"
             android:layout_height="70dp">
         <ImageView
