@@ -45,16 +45,16 @@ class CourseDetailActivity : AppCompatActivity() {
         getKeyhash()
 
         btn_start_course.setOnClickListener {
-            var safetyTipsDialog = SafetyTipsDialog(this)
+            var safetyTipsDialog = SafetyTipsDialog(this,course_idx,name,0)
             safetyTipsDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             safetyTipsDialog.setCanceledOnTouchOutside(false)
             safetyTipsDialog.show()
 
-            val intent = Intent(applicationContext,CourseMapActivity::class.java)
-            intent.putExtra("course_idx",course_idx)
-            intent.putExtra("name",name)
-            intent.putExtra("badge",0)
-            startActivity(intent)
+//            val intent = Intent(applicationContext,CourseMapActivity::class.java)
+//            intent.putExtra("course_idx",course_idx)
+//            intent.putExtra("name",name)
+//            intent.putExtra("badge",0)
+//            startActivity(intent)
         }
     }
 
