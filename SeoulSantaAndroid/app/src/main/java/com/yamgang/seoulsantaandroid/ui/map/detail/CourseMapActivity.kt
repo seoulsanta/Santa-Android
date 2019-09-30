@@ -41,6 +41,7 @@ import androidx.core.content.ContextCompat
 import com.yamgang.seoulsantaandroid.model.BadgeRegister
 import com.yamgang.seoulsantaandroid.model.post.PostBadgeRegister
 import com.yamgang.seoulsantaandroid.ui.MainActivity
+import com.yamgang.seoulsantaandroid.ui.badge.BadgeFragment
 import com.yamgang.seoulsantaandroid.util.User
 
 
@@ -193,7 +194,8 @@ class CourseMapActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<PostBadgeRegister>, response: Response<PostBadgeRegister>) {
                 if(response.isSuccessful){
-                    Toast.makeText(applicationContext,"호쨔~",Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(applicationContext,"호쨔~",Toast.LENGTH_SHORT).show()
+                    finish() //맵 액티비티 종료
 
 
                 }else{
