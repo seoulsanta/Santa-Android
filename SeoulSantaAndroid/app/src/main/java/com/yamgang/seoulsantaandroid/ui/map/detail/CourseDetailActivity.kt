@@ -74,6 +74,7 @@ class CourseDetailActivity : AppCompatActivity() {
 
                     Glide.with(this@CourseDetailActivity)
                         .load(response.body()!!.data.mountain_img)
+                        .centerCrop()
                         .into(img_mt_present)
                     Glide.with(this@CourseDetailActivity)
                         .load(response.body()!!.data.course_img)
