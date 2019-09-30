@@ -3,6 +3,7 @@ package com.yamgang.seoulsantaandroid.ui.map.detail
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.GradientDrawable
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,7 @@ import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.yamgang.seoulsantaandroid.R
 import com.yamgang.seoulsantaandroid.model.get.GetCourse
+import com.yamgang.seoulsantaandroid.ui.map.SafetyTipsDialog
 import com.yamgang.seoulsantaandroid.util.ApplicationController
 import com.yamgang.seoulsantaandroid.util.NetworkService
 import kotlinx.android.synthetic.main.activity_course_detail.*
@@ -43,13 +45,17 @@ class CourseDetailActivity : AppCompatActivity() {
         getKeyhash()
 
         btn_start_course.setOnClickListener {
+            var safetyTipsDialog = SafetyTipsDialog(this)
+            safetyTipsDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            safetyTipsDialog.setCanceledOnTouchOutside(false)
+            safetyTipsDialog.show()
+
             val intent = Intent(applicationContext,CourseMapActivity::class.java)
             intent.putExtra("course_idx",course_idx)
             intent.putExtra("name",name)
             intent.putExtra("badge",0)
             startActivity(intent)
         }
-
     }
 
     fun course(course_idx:Int){

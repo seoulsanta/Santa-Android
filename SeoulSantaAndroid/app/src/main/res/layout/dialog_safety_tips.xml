@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="wrap_content"
+                                                   android:layout_height="wrap_content" android:padding="14dp"
+                                                   android:background="@drawable/border_dialog_safety_10dp">
+
+    <TextView
+            android:text="산악 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView"
+            android:textSize="18sp"
+            android:textColor="@color/safetyTips"
+            android:letterSpacing="-0.04"
+            android:lineSpacingExtra="6sp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="45dp" app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/kopubworlddotumbold"/>
+    <TextView
+            android:text="안전사고 예방 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/colorMain"
+            android:letterSpacing="-0.04"
+            android:lineSpacingExtra="6sp"
+            android:id="@+id/textView3" app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" android:fontFamily="@font/kopubworlddotumbold"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_dialog_safety_agree" app:layout_constraintTop_toBottomOf="@+id/sv_dialog_safety_tips"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+    >
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/agree_yes"
+                android:id="@+id/iv_dialog_safety_agree_yes" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/textView52"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" android:layout_marginBottom="12dp" android:layout_marginTop="12dp"/>
+        <TextView
+                android:text="확인했습니다."
+                android:textSize="15sp"
+                android:textColor="#434343"
+                android:letterSpacing="-0.04"
+                android:lineSpacingExtra="8sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView52"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toTopOf="@+id/iv_dialog_safety_agree_yes"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/check_agree"
+                android:id="@+id/iv_dialog_safety_check"
+                app:layout_constraintEnd_toEndOf="@+id/iv_dialog_safety_agree_yes"
+                app:layout_constraintStart_toStartOf="@+id/iv_dialog_safety_agree_yes"
+                android:layout_marginBottom="18dp" app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="gone"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+            android:text="10대 수칙"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/safetyTips"
+            android:letterSpacing="-0.04"
+            android:lineSpacingExtra="6sp"
+            android:id="@+id/textView5" app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="@+id/textView3" android:fontFamily="@font/kopubworlddotumbold"/>
+    <ScrollView
+            android:layout_width="300dp" android:layout_height="412dp"
+            android:layout_marginTop="21dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" android:id="@+id/sv_dialog_safety_tips"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/cl_dialog_safety_contents">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" android:id="@+id/cl_dialog_safety_1">
+
+                <TextView
+                        android:text="충분한 정보를 얻는다."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:id="@+id/textView9"
+                        app:layout_constraintStart_toStartOf="@+id/textView6"
+                        android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="@+id/textView8"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView7"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="산행코스, 난이도"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:id="@+id/textView7"
+                        app:layout_constraintStart_toEndOf="@+id/textView6"
+                        app:layout_constraintTop_toTopOf="@+id/textView6"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+                <TextView
+                        android:text="등에 대한"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView8"
+                        app:layout_constraintStart_toEndOf="@+id/textView7"
+                        app:layout_constraintTop_toTopOf="@+id/textView7"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="1. 산행 전에 "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:id="@+id/textView6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/kopubworlddotummedium"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cl_dialog_safety_2" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_1">
+
+                <TextView
+                        android:text="2."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView10"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="출입금지구역"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:id="@+id/textView11" app:layout_constraintStart_toEndOf="@+id/textView10"
+                        app:layout_constraintTop_toTopOf="@+id/textView10"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+                <TextView
+                        android:text="(국립공원특별보호구역, 샛길 등)은"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView12"
+                        app:layout_constraintTop_toTopOf="@+id/textView11"
+                        app:layout_constraintStart_toEndOf="@+id/textView11"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="출입하지 않는다."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView13"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView12"
+                        app:layout_constraintStart_toStartOf="@+id/textView10" android:layout_marginStart="8dp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView12" android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cl_dialog_safety_3" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_2">
+                <TextView
+                        android:text="때는 산행을 금하고, 이동 중인 탐방객은"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView16"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintStart_toEndOf="@+id/textView15"
+                        app:layout_constraintTop_toTopOf="@+id/textView15"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="기상특보 "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView15"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintStart_toEndOf="@+id/textView14"
+                        app:layout_constraintTop_toTopOf="@+id/textView14"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+                <TextView
+                        android:text="3."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView14"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/textView16"
+                        app:layout_constraintStart_toStartOf="@+id/textView14"
+                        app:layout_constraintEnd_toEndOf="@+id/textView16">
+
+                    <TextView
+                            android:text="빨리 하산"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/textView17"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:textSize="14sp"
+                            android:textColor="@color/safetyTips"
+                            android:letterSpacing="-0.04"
+                            android:lineSpacingExtra="10sp"
+                            app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/kopubworlddotumbold"/>
+                    <TextView
+                            android:text="하거나 "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView18"
+                            app:layout_constraintTop_toTopOf="@+id/textView17"
+                            android:textSize="14sp"
+                            android:textColor="@color/safetyTips"
+                            android:letterSpacing="-0.04"
+                            android:lineSpacingExtra="10sp"
+                            app:layout_constraintStart_toEndOf="@+id/textView17"
+                            android:fontFamily="@font/kopubworlddotummedium"/>
+                    <TextView
+                            android:text="한다."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView20"
+                            android:textSize="14sp"
+                            android:textColor="@color/safetyTips"
+                            android:letterSpacing="-0.04"
+                            android:lineSpacingExtra="10sp"
+                            app:layout_constraintTop_toTopOf="@+id/textView19"
+                            app:layout_constraintStart_toEndOf="@+id/textView19"
+                            android:fontFamily="@font/kopubworlddotummedium"/>
+                    <TextView
+                            android:text="안전한 장소로 대피"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView19"
+                            android:textSize="14sp"
+                            android:textColor="@color/safetyTips"
+                            android:letterSpacing="-0.04"
+                            android:lineSpacingExtra="10sp"
+                            app:layout_constraintStart_toEndOf="@+id/textView18"
+                            app:layout_constraintTop_toTopOf="@+id/textView18"
+                            android:fontFamily="@font/kopubworlddotumbold"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cl_dialog_safety_4" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_3">
+                <TextView
+                        android:text="4. "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView21"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="낙뢰 예보"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView22"
+                        app:layout_constraintStart_toEndOf="@+id/textView21"
+                        app:layout_constraintTop_toTopOf="@+id/textView21"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+                <TextView
+                        android:text="가 있을 때는 산행을 "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView23"
+                        app:layout_constraintStart_toEndOf="@+id/textView22"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintTop_toTopOf="@+id/textView22"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="삼가야 "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView24"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintTop_toTopOf="@+id/textView23"
+                        app:layout_constraintStart_toEndOf="@+id/textView23"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+                <TextView
+                        android:text="한다."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:id="@+id/textView25"
+                        app:layout_constraintTop_toTopOf="@+id/textView24"
+                        app:layout_constraintStart_toEndOf="@+id/textView24"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cl_dialog_safety_5" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_4">
+                <TextView
+                        android:text="5. 자신의 "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView26"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="체력"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView27" app:layout_constraintStart_toEndOf="@+id/textView26"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintTop_toTopOf="@+id/textView26"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+                <TextView
+                        android:text="을 고려하여 "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView28"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintTop_toTopOf="@+id/textView27"
+                        app:layout_constraintStart_toEndOf="@+id/textView27"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="산행 계획을 수립"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView29" app:layout_constraintStart_toEndOf="@+id/textView28"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintTop_toTopOf="@+id/textView28"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+                <TextView
+                        android:text="한다."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView30" app:layout_constraintStart_toEndOf="@+id/textView29"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintTop_toTopOf="@+id/textView29"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="(절대 무리한 산행을 하지 않는다.)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView31" app:layout_constraintStart_toStartOf="@+id/textView26"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/textView30"
+                        app:layout_constraintHorizontal_bias="0.521"
+                        app:layout_constraintTop_toBottomOf="@+id/textView28"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cl_dialog_safety_6" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_5">
+                <TextView
+                        android:text="6. "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView32"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="충분한 경험과 장비"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView33"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView32"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+                <TextView
+                        android:text="를 갖추지 않은 자는"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView34"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView33"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="@+id/textView34"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView33">
+
+                    <TextView
+                            android:text="암릉, 암벽 등반을 "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView35" app:layout_constraintStart_toStartOf="parent"
+                            android:textSize="14sp"
+                            android:textColor="@color/safetyTips"
+                            android:letterSpacing="-0.04"
+                            android:lineSpacingExtra="10sp"
+                            app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/kopubworlddotumbold"/>
+                    <TextView
+                            android:text="하지 않는다."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView36" app:layout_constraintStart_toEndOf="@+id/textView35"
+                            android:textSize="14sp"
+                            android:textColor="@color/safetyTips"
+                            android:letterSpacing="-0.04"
+                            android:lineSpacingExtra="10sp"
+                            app:layout_constraintTop_toTopOf="@+id/textView35"
+                            android:fontFamily="@font/kopubworlddotummedium"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cl_dialog_safety_7" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_6">
+                <TextView
+                        android:text="7. "
+                        android:layout_width="14dp"
+                        android:layout_height="wrap_content" android:id="@+id/textView37"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="폭우"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView38"
+                        app:layout_constraintTop_toTopOf="@+id/textView37"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintStart_toEndOf="@+id/textView37"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+                <TextView
+                        android:text="로 수량이 불어난 계곡은"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView39"
+                        app:layout_constraintTop_toTopOf="@+id/textView38"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintStart_toEndOf="@+id/textView38"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView39"
+                        app:layout_constraintTop_toBottomOf="@+id/textView39">
+
+                    <TextView
+                            android:text="무리하게 "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView40"
+                            android:textSize="14sp"
+                            android:textColor="@color/safetyTips"
+                            android:letterSpacing="-0.04"
+                            android:lineSpacingExtra="10sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/kopubworlddotumbold"/>
+                    <TextView
+                            android:text="건너지 않는다."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView41"
+                            app:layout_constraintTop_toTopOf="@+id/textView40"
+                            android:textSize="14sp"
+                            android:textColor="@color/safetyTips"
+                            android:letterSpacing="-0.04"
+                            android:lineSpacingExtra="10sp"
+                            app:layout_constraintStart_toEndOf="@+id/textView40"
+                            android:fontFamily="@font/kopubworlddotummedium"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cl_dialog_safety_8" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_7">
+                <TextView
+                        android:text="8. 산행 "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView42"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="전⦁후 스트레칭"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView43"
+                        app:layout_constraintTop_toTopOf="@+id/textView42"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintStart_toEndOf="@+id/textView42"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+                <TextView
+                        android:text="으로 충분히 몸을 푼다."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView44"
+                        app:layout_constraintTop_toTopOf="@+id/textView43"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintStart_toEndOf="@+id/textView43"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cl_dialog_safety_9" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_8">
+                <TextView
+                        android:text="9. 계절별로 "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView45"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="장비와 복장"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView46"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintTop_toTopOf="@+id/textView45"
+                        app:layout_constraintStart_toEndOf="@+id/textView45"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+                <TextView
+                        android:text="을 갖춘다."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView47"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        app:layout_constraintTop_toTopOf="@+id/textView46"
+                        app:layout_constraintStart_toEndOf="@+id/textView46"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cl_dialog_safety_10" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_9">
+                <TextView
+                        android:text="10. 될 수 있으면  "
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView48"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="단독 산행"
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView49"
+                        app:layout_constraintTop_toTopOf="@+id/textView48"
+                        app:layout_constraintStart_toEndOf="@+id/textView48"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+                <TextView
+                        android:text="을 "
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView50"
+                        app:layout_constraintTop_toTopOf="@+id/textView49"
+                        app:layout_constraintStart_toEndOf="@+id/textView49"
+                        android:fontFamily="@font/kopubworlddotummedium"/>
+                <TextView
+                        android:text="피한다."
+                        android:textSize="14sp"
+                        android:textColor="@color/safetyTips"
+                        android:letterSpacing="-0.04"
+                        android:lineSpacingExtra="10sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView51"
+                        app:layout_constraintTop_toTopOf="@+id/textView50"
+                        app:layout_constraintStart_toEndOf="@+id/textView50"
+                        android:fontFamily="@font/kopubworlddotumbold"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="217dp"
+            android:layout_height="39dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_dialog_safety_agree" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:id="@+id/btn_dialog_safety_selected"
+            android:layout_marginBottom="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/border_dialog_safety_selected">
+
+        <TextView
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:letterSpacing="-0.06"
+                android:lineSpacingExtra="8sp"
+                android:gravity="center_horizontal"
+                android:text="코스 시작하기"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView54"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                android:fontFamily="@font/kopubworlddotummedium"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="217dp"
+            android:layout_height="39dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_dialog_safety_agree" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:id="@+id/btn_dialog_safety_unselected"
+            android:layout_marginBottom="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/border_dialog_safety_unselected">
+
+        <TextView
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:letterSpacing="-0.06"
+                android:lineSpacingExtra="8sp"
+                android:gravity="center_horizontal"
+                android:text="코스 시작하기"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView55"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                android:fontFamily="@font/kopubworlddotummedium"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

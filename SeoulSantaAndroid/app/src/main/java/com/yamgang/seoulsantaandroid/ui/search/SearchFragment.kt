@@ -316,6 +316,7 @@ class SearchFragment : Fragment() {
             setVisible(search_detail_container)
         }
 
+        setVisible(sv_search_result)
         setVisible(search_result_container)
         setVisible(rv_search_result_course_list)
         setGone(search_result_no_item_container)
@@ -329,6 +330,7 @@ class SearchFragment : Fragment() {
         }
 
         setVisible(search_result_no_item_container)
+        setGone(sv_search_result)
         setGone(search_result_container)
         setGone(rv_search_result_course_list)
     }
