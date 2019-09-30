@@ -41,6 +41,7 @@ class MapRVAdapter(private val ctx: Context, var dataList: ArrayList<Courses>)
 
         Glide.with(ctx)
             .load(dataList[position].course_img)
+            .centerCrop()
             .into(holder.courseImg)
 
 

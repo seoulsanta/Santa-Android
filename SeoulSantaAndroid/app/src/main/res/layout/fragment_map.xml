@@ -261,7 +261,7 @@
                 android:visibility="gone"
                 android:id="@+id/rcv_map"
                 android:layout_below="@+id/map_background_layout"
-                android:layout_marginTop="51dp"
+                android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
 

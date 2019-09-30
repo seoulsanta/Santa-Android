@@ -71,7 +71,9 @@ class CourseDetailActivity : AppCompatActivity() {
                         .into(img_mt_present)
                     Glide.with(this@CourseDetailActivity)
                         .load(response.body()!!.data.course_img)
+                        .centerCrop()
                         .into(img_course)
+
                     mt_name.text = response.body()!!.data.mountain_name
                     mt_content.text = response.body()!!.data.mountain_content
                     name = response.body()!!.data.course_name
