@@ -1,5 +1,6 @@
 package com.yamgang.seoulsantaandroid.ui.login
 
+import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -12,8 +13,15 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
+    class MyClass{
+        companion object {
+            var act: Activity? = null
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        MyClass.act = this@LoginActivity
         setContentView(R.layout.activity_login)
 
         setOnClickListener()
@@ -29,7 +37,6 @@ class LoginActivity : AppCompatActivity() {
             Log.e("Tag","kakaoLogin")
             session.addCallback(SessionCallback(this))
             session.open(AuthType.KAKAO_ACCOUNT,this)
-            finish()
         }
     }
 }
