@@ -1,5 +1,5 @@
 # Santa-Android
-2019 서울시 앱 공모전 : 서울산타 안드로이드 
+서울특별시 등산코스 안내 모바일 어플리케이션
 
 
 <img width="1060" alt="01" src="https://user-images.githubusercontent.com/24809669/65867683-d6902c00-e3b1-11e9-99bc-07d095f4d144.png">
