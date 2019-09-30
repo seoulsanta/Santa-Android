@@ -26,6 +26,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/santa_logo"/>
         <ImageView
+                android:visibility="gone"
                 android:id="@+id/btn_login_naver"
                 android:layout_marginTop="95dp"
                 android:layout_width="wrap_content"
@@ -33,7 +34,7 @@
                 android:background="@drawable/button_naver"/>
         <ImageView
                 android:id="@+id/btn_login_kakao"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="40dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_kakao"/>

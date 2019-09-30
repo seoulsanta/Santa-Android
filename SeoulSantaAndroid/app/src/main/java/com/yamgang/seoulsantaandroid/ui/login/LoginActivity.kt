@@ -26,9 +26,9 @@ class LoginActivity : AppCompatActivity() {
 
         setOnClickListener()
 
-        btn_login_naver.setOnClickListener {
-            Toast.makeText(this, "서비스 준비 중입니다.", Toast.LENGTH_SHORT).show()
-        }
+//        btn_login_naver.setOnClickListener {
+//            Toast.makeText(this, "서비스 준비 중입니다.", Toast.LENGTH_SHORT).show()
+//        }
     }
 
     private fun setOnClickListener() {
