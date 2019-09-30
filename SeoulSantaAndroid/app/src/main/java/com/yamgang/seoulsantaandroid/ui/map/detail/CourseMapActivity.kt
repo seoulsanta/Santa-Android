@@ -41,6 +41,7 @@ import androidx.core.content.ContextCompat
 import com.yamgang.seoulsantaandroid.model.BadgeRegister
 import com.yamgang.seoulsantaandroid.model.post.PostBadgeRegister
 import com.yamgang.seoulsantaandroid.ui.MainActivity
+import com.yamgang.seoulsantaandroid.ui.badge.BadgeFragment
 import com.yamgang.seoulsantaandroid.util.User
 
 
@@ -66,7 +67,7 @@ class CourseMapActivity : AppCompatActivity() {
         setContentView(R.layout.activity_course_map)
 
         mapView = MapView(this)
-        mapView.currentLocationTrackingMode = MapView.CurrentLocationTrackingMode.TrackingModeOff
+
 
         if (!checkLocationServicesStatus()) {
 
@@ -75,6 +76,10 @@ class CourseMapActivity : AppCompatActivity() {
 
             checkRunTimePermission()
         }
+
+
+
+       // mapView.currentLocationTrackingMode = MapView.CurrentLocationTrackingMode.TrackingModeOff
 
 
 
@@ -189,7 +194,8 @@ class CourseMapActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<PostBadgeRegister>, response: Response<PostBadgeRegister>) {
                 if(response.isSuccessful){
-                    Toast.makeText(applicationContext,"호쨔~",Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(applicationContext,"호쨔~",Toast.LENGTH_SHORT).show()
+                    finish() //맵 액티비티 종료
 
 
                 }else{
@@ -323,6 +329,7 @@ class CourseMapActivity : AppCompatActivity() {
 
 
             // 3.  위치 값을 가져올 수 있음
+            mapView.currentLocationTrackingMode = MapView.CurrentLocationTrackingMode.TrackingModeOff
 
 
         } else {  //2. 퍼미션 요청을 허용한 적이 없다면 퍼미션 요청이 필요합니다. 2가지 경우(3-1, 4-1)가 있습니다.

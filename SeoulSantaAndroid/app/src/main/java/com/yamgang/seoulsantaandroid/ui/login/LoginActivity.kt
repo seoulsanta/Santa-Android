@@ -29,6 +29,7 @@ class LoginActivity : AppCompatActivity() {
             Log.e("Tag","kakaoLogin")
             session.addCallback(SessionCallback(this))
             session.open(AuthType.KAKAO_ACCOUNT,this)
+            finish()
         }
     }
 }

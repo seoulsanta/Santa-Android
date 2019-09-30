@@ -2,15 +2,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="100dp"
+              android:layout_height="wrap_content"
                 android:background="#ffffff">
     <RelativeLayout
-            android:paddingLeft="31dp"
-            android:paddingRight="27dp"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="31dp"
+            android:layout_marginTop="21dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
             android:layout_width="match_parent"
             android:layout_height="70dp">
+        <ImageView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_right"
+                android:layout_alignParentRight="true"
+        />
+
         <ImageView
                 android:id="@+id/rcv_img_course"
                 android:layout_alignParentLeft="true"
@@ -19,10 +26,10 @@
                 android:background="#bcbcbc"/>
 
         <LinearLayout
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="15dp"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/rcv_img_course"
-                android:layout_width="140dp"
+                android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:orientation="vertical"
                 android:weightSum="3">
@@ -33,10 +40,10 @@
                     android:layout_weight="1"
                     android:textSize="13sp"
                     android:textColor="#000000"
-                    android:fontFamily="@font/kopubworlddotumlight"
+                    android:fontFamily="@font/kopubworlddotumbold"
                     android:text="2코스"/>
             <RelativeLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
                 <TextView
@@ -58,7 +65,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
                 <TextView

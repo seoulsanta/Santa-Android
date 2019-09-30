@@ -7,6 +7,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.transition.TransitionManager
 import android.util.Log
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -77,6 +78,8 @@ class SearchFragment : Fragment() {
 
 //        setVisible(search_container)
 //        setGone(search_detail_container)
+
+        setOnKeyListener()
 
         btn_search_icon.setOnClickListener {
             var search_word: String = edt_search_mountain.text.toString()
@@ -228,6 +231,46 @@ class SearchFragment : Fragment() {
                 }
             }
         })
+    }
+
+    fun setOnKeyListener() {
+        edt_search_mountain.setOnKeyListener { view, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_ENTER && (event.action == KeyEvent.ACTION_DOWN)) {
+                var search_word: String = edt_search_mountain.text.toString()
+                if (search_word.length < 2) {
+                    Toast.makeText(this@SearchFragment.context!!, "두 글자 이상 입력해주세요 :)", Toast.LENGTH_SHORT).show()
+                } else {
+                    view_search_detail.isSelected = true
+                    getSearchResponse(search_word)
+
+                    // 키보드 숨기기
+                    var imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    imm.hideSoftInputFromWindow(edt_search_mountain.windowToken, 0)
+                }
+                return@setOnKeyListener true
+            }
+            return@setOnKeyListener false
+        }
+        edt_search_detail_word.setOnKeyListener { view, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_ENTER && (event.action == KeyEvent.ACTION_DOWN)) {
+                var search_word: String = edt_search_detail_word.text.toString()
+                setGone(btn_search_detail)
+                setVisible(btn_search_x)
+
+                if (search_word.length < 2) {
+                    Toast.makeText(this@SearchFragment.context!!, "두 글자 이상 입력해주세요 :)", Toast.LENGTH_SHORT).show()
+                } else {
+                    view_search_detail.isSelected = true
+                    getSearchResponse(search_word)
+
+                    // 키보드 숨기기
+                    var imm = activity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    imm.hideSoftInputFromWindow(edt_search_mountain.windowToken, 0)
+                }
+                return@setOnKeyListener true
+            }
+            return@setOnKeyListener false
+        }
     }
 
     // 추천 검색어 서버 통신
