@@ -26,7 +26,8 @@ class SearchResultCourseRVAdapter(private val ctx: Context, var dataList: ArrayL
     override fun getItemCount(): Int = dataList.size
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        var options: RequestOptions = RequestOptions().transform(CenterCrop(), RoundedCorners(10))
+
+        var options: RequestOptions = RequestOptions().transforms(CenterCrop(), RoundedCorners(10))
 
         dataList[position].let { item ->
             Glide.with(ctx)
