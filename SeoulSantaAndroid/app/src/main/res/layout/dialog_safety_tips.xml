@@ -44,6 +44,7 @@
         <TextView
                 android:text="확인했습니다."
                 android:textSize="15sp"
+                android:fontFamily="@font/kopubworlddotumlight"
                 android:textColor="#434343"
                 android:letterSpacing="-0.04"
                 android:lineSpacingExtra="8sp"
@@ -74,14 +75,17 @@
     <ScrollView
             android:layout_width="300dp" android:layout_height="412dp"
             android:layout_marginTop="21dp"
+            android:overScrollMode="never"
+            android:foregroundGravity="center_horizontal"
             app:layout_constraintTop_toBottomOf="@+id/textView3" android:id="@+id/sv_dialog_safety_tips"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" android:id="@+id/cl_dialog_safety_contents">
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
+                    android:foregroundGravity="center_horizontal"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -136,6 +140,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:foregroundGravity="center_horizontal"
                     android:id="@+id/cl_dialog_safety_2" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
                     app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_1">
@@ -187,6 +192,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:foregroundGravity="center_horizontal"
                     android:id="@+id/cl_dialog_safety_3" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
                     app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_2">
@@ -280,6 +286,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:foregroundGravity="center_horizontal"
                     android:id="@+id/cl_dialog_safety_4" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
                     app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_3">
@@ -344,6 +351,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:foregroundGravity="center_horizontal"
                     android:id="@+id/cl_dialog_safety_5" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
                     app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_4">
@@ -419,6 +427,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:foregroundGravity="center_horizontal"
                     android:id="@+id/cl_dialog_safety_6" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
                     app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_5">
@@ -485,6 +494,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:foregroundGravity="center_horizontal"
                     android:id="@+id/cl_dialog_safety_7" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
                     app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_6">
@@ -557,6 +567,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:foregroundGravity="center_horizontal"
                     android:id="@+id/cl_dialog_safety_8" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="35dp"
                     app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_7">
@@ -598,6 +609,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:foregroundGravity="center_horizontal"
                     android:id="@+id/cl_dialog_safety_9" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="24dp"
                     app:layout_constraintTop_toBottomOf="@+id/cl_dialog_safety_8">
@@ -639,6 +651,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:foregroundGravity="center_horizontal"
                     android:id="@+id/cl_dialog_safety_10" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"

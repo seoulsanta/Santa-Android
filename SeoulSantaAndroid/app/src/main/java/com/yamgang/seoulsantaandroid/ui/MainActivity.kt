@@ -1,5 +1,6 @@
 package com.yamgang.seoulsantaandroid.ui
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -11,8 +12,15 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    class MainClass{
+        companion object {
+            var act: Activity? = null
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        MainClass.act = this@MainActivity
         setContentView(R.layout.activity_main)
 
         viewInit()

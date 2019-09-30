@@ -76,8 +76,7 @@ class SessionCallback (mContext: Context) : ISessionCallback {
 
                     val intent = Intent(mContext,MainActivity::class.java)
                     mContext.startActivity(intent)
-                    val loginAct = LoginActivity()
-                    loginAct.finish()
+                    LoginActivity.MyClass.act?.finish()
                 } else {
                     Log.e("*****KakaoLogin Response","실패")
                 }
