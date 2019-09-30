@@ -74,9 +74,9 @@ class MyActivity : AppCompatActivity() {
             User.authorization = null
             User.refreshtoken = null
             startActivity<LoginActivity>()
+            MainActivity.MainClass.act?.finish()
             finish()
-            val mainActivity = MainActivity()
-            mainActivity.finish()
+
         }
         btn_act_my_setting.setOnClickListener {
             //설정
