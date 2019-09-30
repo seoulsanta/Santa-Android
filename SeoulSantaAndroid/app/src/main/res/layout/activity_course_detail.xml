@@ -12,8 +12,8 @@
             android:layout_alignParentTop="true"
             android:id="@+id/img_mt_present"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/mountain_img"/>
+            android:layout_height="341dp"
+            android:background="#ffffff"/>
 
     <LinearLayout
             android:id="@+id/text_layout"
@@ -84,7 +84,7 @@
                     android:fontFamily="@font/kopubworlddotumbold"
                     android:text="2코스"/>
             <RelativeLayout
-                    android:layout_width="100dp"
+                    android:layout_width="185dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
                 <TextView
@@ -107,7 +107,7 @@
 
             <RelativeLayout
 
-                    android:layout_width="100dp"
+                    android:layout_width="185dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
                 <TextView
@@ -146,7 +146,7 @@
                 android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="#ffffff"
                 android:fontFamily="@font/kopubworlddotummedium"
                 android:text="코스 시작하기"/>

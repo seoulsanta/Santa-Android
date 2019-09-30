@@ -2,14 +2,19 @@ package com.yamgang.seoulsantaandroid.ui.map
 
 import android.app.Dialog
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.yamgang.seoulsantaandroid.R
+import com.yamgang.seoulsantaandroid.ui.map.detail.CourseMapActivity
 import kotlinx.android.synthetic.main.dialog_safety_tips.*
 
-class SafetyTipsDialog(context: Context) : Dialog(context)  {
+class SafetyTipsDialog(context: Context,course_idx: Int,name : String, badge:Int) : Dialog(context)  {
 
     var isChecked: Boolean = false
+    var course_idx = course_idx
+    var name = name
+    var badge = badge
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +37,11 @@ class SafetyTipsDialog(context: Context) : Dialog(context)  {
         }
 
         btn_dialog_safety_selected.setOnClickListener {
+            val intent = Intent(context, CourseMapActivity::class.java)
+            intent.putExtra("course_idx",course_idx)
+            intent.putExtra("name",name)
+            intent.putExtra("badge",0)
+            context.startActivity(intent)
             dismiss()
         }
     }
